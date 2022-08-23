@@ -1,0 +1,231 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import manWorking from "../images/man-working.svg";
+import manIdea from "../images/man-idea.svg";
+import ButtonSpongy from "../components/ButtonSpongy.astro";
+
+import graduationIcon from "../images/icons/graduation-cap.svg"
+import xtoonzBuilding from "../images/building-full.png";
+import developmentIcon from "../images/icons/development.svg";
+
+import upperContactBrace from "../images/contact/upper-brace.svg";
+import lowerLeftContactBrace from "../images/contact/lower-left-brace.svg";
+import lowerRightContactBrace from "../images/contact/lower-right-brace.svg";
+
+import "../styles/global.css";
+---
+
+<BaseLayout>
+	<section class="h-screen">
+		<h1 class="text-5xl font-bold">Hi, I'm Simon.</h1>
+		<!-- <div id="hero-animation" /> -->
+		<div class="flex justify-center pt-6">
+			<img src={manWorking} alt="Man working" class="w-80 h-auto" />
+		</div>
+		<p class="py-6 text-lg">I build zero-to-one products in web3</p>
+		<div class="flex space-x-10">
+			<!-- <ButtonSpongy text="Services" colour="orange" /> -->
+			<div class="orange-button px-4 py-2 accent block">
+				Services
+			</div>
+			<div class="bg-green px-4 py-2 accent block">
+				Portfolio
+			</div>
+			<div class="purple-button px-4 py-2 accent block">
+				Contact
+			</div>
+		</div>
+	</section>
+	<section class="flex flex-col space-y-6">
+		<h2 class="text-4xl font-bold">From idea to product</h2>
+		<p class="text-lg">I specialise in turning ideas in to products, rapidly developing.</p>
+		<div class="flex w-full">
+			<div class="w-1/2 text-left pt-8">
+				<p>This includes:</p>
+				<ul>
+					<li>Brand Strategy</li>
+					<li>UI/UX Design</li>
+					<li>Web App/Desktop development</li>
+					<li>Smart Contract development</li>
+				</ul>
+			</div>
+			<div class="flex justify-center pt-6 w-1/2">
+				<img src={manIdea} alt="Man working" class="w-32 h-auto" />
+			</div>
+		</div>
+	</section>
+	<section class="pt-16 flex flex-col space-y-4 w-4/5">
+		<h2 class="text-4xl font-bold">About Me</h2>
+		<p class="text-xl py-2">Product minded engineer.<br/>
+		Background in startup & science.</p>
+		<div class="flex flex-col md:flex-row justify-center items-center space-x-2 lg:h-60">
+			<div class="flex flex-col space-y-4 h-full justify-center w-2/5">
+				<div class="border-2 border-light-grey flex space-x-4 py-0.5 px-1">
+					<div>
+						<img src={graduationIcon} alt="Graduation cap" class="w-16 h-auto" />
+						<p>MSc</p>
+					</div>
+					<div class="text-left flex flex-col justify-center space-y-1">
+						<p>Risk Management & <br/>
+							Financial Engineering</p>
+						<p>Imperial College London</p>
+					</div>
+				</div>
+				<div class="border-2 border-light-grey flex space-x-4 py-0.5 px-1">
+					<div>
+						<img src={graduationIcon} alt="Graduation cap" class="w-16 h-auto" />
+						<p>MChem</p>
+					</div>
+					<div class="text-left flex flex-col justify-center space-y-1">
+						<p>Chemistry with <br/>
+							study year abroad (US)</p>
+						<p>University of Leicester</p>
+					</div>
+				</div>
+			</div>
+			<p class="text-3xl">+</p>
+			<!-- <div class="border-2 border-light-grey py-0.5 px-1 h-full">
+				<p class="text-2xl">Experience</p>
+			</div> -->
+			<div class="border-2 border-light-grey py-1 px-2 lg:h-60 flex flex-col items-center w-1/5">
+				<p class="text-2xl pb-2">Develop</p>
+				<div class="flex items-center">
+					<ul class="text-left">
+						<li>Python</li>
+						<li>SQL</li>
+						<li>C++</li>
+						<li>Vyper</li>
+						<li>Solidity</li>
+						<li>React JS</li>
+						<li>Tailwind CSS</li>
+						<li>Docker</li>
+					</ul>
+				</div>
+			</div>
+			<p class="text-3xl">+</p>
+			<div class="border-2 border-light-grey py-1 px-2 lg:h-60 flex flex-col items-center w-1/5">
+				<p class="text-2xl pb-2">Design</p>
+				<div class="flex items-center">
+					<ul class="text-left">
+						<li>Photoshop</li>
+						<li>Adobe XD</li>
+						<li>Illustrator</li>
+						<li>Premiere Pro</li>
+						<li>After Effects</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="py-16 flex flex-col items-center w-3/4">
+		<h2 class="text-4xl font-bold">What clients are saying</h2>
+		<div class=" py-8 flex space-x-6">
+			<div>
+				&lt;
+			</div>
+			<div class="fixed-block blue-shadow w-full py-1 px-2 text-left">
+				<p>Simon is a brilliant guy. Able to take on a job which was a little bit technically awkward (that many had refused for being too complex) and pulled it off flawlessly. Extremely fast to respond to questions and turn around changes. Planning to work with Simon again.</p>
+				<div class="text-center pt-1">
+					<p>Raymond Thompson</p>
+					<p>XRDC Founder</p>
+				</div>
+				
+			</div>
+			<div>
+				&gt;
+			</div>
+		</div>
+		<h2 class="text-4xl font-bold py-8">Portfolio</h2>
+		<p>click to filter by category</p>
+		<div class="flex space-x-4 py-4">
+			<div class="base-shadow cursor-pointer">
+				<div class="offset-box py-0.5 px-2">
+					Web3
+				</div>
+			</div>
+			<div class="base-shadow cursor-pointer">
+				<div class="offset-box py-0.5 px-2">
+					Web
+				</div>
+			</div>
+			<div class="base-shadow cursor-pointer">
+				<div class="offset-box py-0.5 px-2">
+					SaaS
+				</div>
+			</div>
+			<div class="base-shadow cursor-pointer">
+				<div class="offset-box py-0.5 px-2">
+					Other
+				</div>
+			</div>
+		</div>
+		<div class="w-full h-full flex flex-col">
+			<div class="h-72 overflow-clip">
+				<img src={xtoonzBuilding} alt="X-Toonz Social Club" class="object-cover" />
+			</div>
+			<div class="py-1 px-2 rounded-bl-lg rounded-br-lg border-2 border-t-0 border-light-grey relative">
+				<div class="base-shadow no-hover absolute top-2 left-2">
+					<div class="offset-box py-0.5 px-2">
+						Web3
+					</div>
+				</div>
+				<p class="text-4xl font-semibold">X-Toonz</p>
+				<p>Social club for the decentralised in Miami, FL.</p>
+				<p class="text-right underline">more details &gt;&gt;</p>
+			</div>
+		</div>
+	</section>
+	<section class="w-full">
+		<h2 class="text-4xl font-bold">Under Construction</h2>
+		<p class="py-4">I’m always building, either alone or collaboratively.<br/>
+			These areas currently include:</p>
+			<div class="flex flex-col space-y-4">
+				<div class="flex items-center py-1">
+					<div class="text-2xl bold text-right whitespace-nowrap w-1/2">
+						On-Chain Pool Betting
+					</div>
+					<div class="w-1/3 px-6">
+						<div class="progress-bar almost-complete" />
+					</div>
+				</div>
+				<div class="flex items-center py-1">
+					<div class="text-2xl bold text-right whitespace-nowrap w-1/2">
+						ERC721 Wrapped ERC-20 Tokens
+					</div>
+					<div class="w-1/3 px-6">
+						<div class="progress-bar half-complete" />
+					</div>
+				</div>
+				<div class="flex items-center py-1">
+					<div class="text-2xl bold text-right whitespace-nowrap w-1/2">
+						Dynamic Metadata Tool
+					</div>
+					<div class="w-1/3 px-6">
+						<div class="progress-bar just-started" />
+					</div>
+				</div>
+			</div>
+	</section>
+	<section class="py-16 flex flex-col items-center w-3/4">
+		<h2 class="text-4xl font-bold">Contact</h2>
+		<div class="w-content flex flex-col">
+			<div class="flex justify-end">
+				<div class="w-[65%] flex flex-col items-center mr-[15%] contact-brace">
+					<p>Twitter</p>
+					<img src={upperContactBrace} alt="Twitter @flatpackfintech" />
+				</div>
+			</div>
+			<p class="text-xl md:text-3xl tracking-widest whitespace-nowrap">simon@flatpackfintech.com</p>
+			<div class="relative">
+				<div class="w-[26%] mt-1 flex flex-col items-center z-0 absolute left-0 hover contact-braces">
+					<img src={lowerLeftContactBrace} alt="Twitter @flatpackfintech" />
+					<p>Email</p>
+				</div>
+				<div class="w-[75%] flex flex-col items-center z-10 absolute right-0">
+					<img src={lowerRightContactBrace} alt="Twitter @flatpackfintech" />
+					<p>Blog</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import '../styles/global.css';
+---
+<html>
+  <head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Dunkelman</title>
+	
+	<link rel="stylesheet" href="https://use.typekit.net/vab0yta.css">
+  </head>
+  <body>
+    <main class="container mx-auto py-10 text-center flex flex-col justify-center items-center px-6 md:px-20 lg:px-32">
+      <slot />
+    </main>
+    
+	<!-- Scripts -->
+	<script src="../scripts/bodymovin.js"></script>
+	<script src="../scripts/index.js"></script>
+  </body>
+</html>
