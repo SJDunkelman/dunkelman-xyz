@@ -9,11 +9,13 @@ export default function AnnotatedContact(){
     // whichHovered = 0 (none highlighted), 1 (email highlighted), 2 (twitter highlighted), 3 (blog highlighted)
 
     return (
-        <div className="w-content flex flex-col text-lg underline-offset-8">
+        <div className="w-content flex flex-col text-lg underline-offset-4">
 			<div className="flex justify-end">
-				<div className="w-[65%] flex flex-col items-center mr-[15%] contact-brace mb-1" onMouseOver={() => setHovered(2)} onMouseOut={() => setHovered(0)}>
-					<p className={`${whichHovered === 2 ? "text-deep-blue text-2xl" : ""}`}>Twitter</p>
-					<img src={upperContactBrace} alt="Twitter @flatpackfintech" className={`${whichHovered === 2 ? "twitter-brace-hover" : ""}`} />
+				<div className="w-[65%] flex flex-col items-center mr-[15%] contact-brace mb-2" onMouseOver={() => setHovered(2)} onMouseOut={() => setHovered(0)}>
+                    <a href="https://www.twitter.com/flatpackfintech">
+                        <p className={`${whichHovered === 2 ? "text-deep-blue text-xl underline" : ""}`}>Twitter</p>
+                    </a>
+                        <img src={upperContactBrace} alt="Twitter @flatpackfintech" className={`pt-1 ${whichHovered === 2 ? "twitter-brace-hover" : ""}`} />
 				</div>
 			</div>
             {
@@ -35,11 +37,15 @@ export default function AnnotatedContact(){
 			<div className="relative mt-2">
 				<div className="w-[26%] mt-1 flex flex-col items-center z-0 absolute left-0 hover contact-braces" onMouseOver={() => setHovered(1)} onMouseOut={() => setHovered(0)}>
 					<img src={lowerLeftContactBrace} alt="Email" className={`${whichHovered === 1 ? "email-brace-hover" : ""}`} />
-					<p className={`${whichHovered === 1 ? "text-green text-3xl underline" : ""}`}>Email</p>
+                    <a href="mailto:simon@flatpackfintech.com?subject=Hi%20Simon">
+					    <p className={`${whichHovered === 1 ? "text-green text-xl underline" : ""}`}>Email</p>
+                    </a>
 				</div>
 				<div className="w-[75%] flex flex-col items-center z-10 absolute right-0" onMouseOver={() => setHovered(3)} onMouseOut={() => setHovered(0)}>
 					<img src={lowerRightContactBrace} alt="Blog flatpackfintech.com" className={`${whichHovered === 1 ? "email-brace-hover" : ""} ${whichHovered === 3 ? "website-brace-hover" : ""}`} />
-					<p className={`${whichHovered === 3 ? "text-purple text-3xl underline" : ""}`}>Blog</p>
+                    <a href="https://www.flatpackfintech.com">
+					    <p className={`${whichHovered === 3 ? "text-purple text-xl underline" : ""}`}>Blog</p>
+                    </a>
 				</div>
 			</div>
 		</div>
