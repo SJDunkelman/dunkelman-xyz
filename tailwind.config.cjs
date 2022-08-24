@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	options: {
-		safelist: ["bg-orange"],
+		safelist: ["bg-orange", "group-foo-hover:text-deep-blue"],
 	},
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -19,7 +19,14 @@ module.exports = {
 				'green': '#7FC29B',
 				'muted-green': '#B6C5C4',
 			},
+			spacing: {
+				'128': '32rem',
+				'144': '36rem',
 		},
+		namedGroups: ["foo", "bar", "baz"],
 	},
-	plugins: [],
+	plugins: [
+		require("tailwindcss-named-groups"),
+	],
+}
 }

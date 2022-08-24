@@ -1,0 +1,38 @@
+---
+// 1. The frontmatter prop gives access to frontmatter and other data
+const { frontmatter } = Astro.props;
+import '../styles/global.css';
+import profileIcon from "../images/icons/profile-face.svg";
+import NavigationBar from "../components/NavigationBar.jsx";
+---
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <main class="container mx-auto py-10 text-center flex flex-col justify-center items-center px-6 md:px-20 lg:px-32">
+      <NavigationBar />
+      <div class="w-full h-content overflow-clip relative">
+				<img src={frontmatter.image} alt="Header image" class="object-cover" />
+        <div class="w-full h-full bg-white opacity-50 absolute top-0 left-0" />
+        <h1 class="text-5xl font-bold text-grey absolute left-0 top-1/2 translate-x-4 -translate-y-1/2">{frontmatter.title}</h1>
+			</div>
+      <div class="w-full text-center py-4">
+        <p class="text-lg">{frontmatter.summary}</p>
+      </div>
+      <hr class="w-4/5 bg-gradient-to-r from-white via-grey to-white opacity-25 rounded-full h-[2px]">
+    <div class="flex justify-between items-center py-4 w-4/5">
+      <img src={profileIcon} alt="Simon Dunkelman profile icon" class="h-16">
+      <div class="flex flex-col items-start w-full px-4 text-xl">
+        <p><span class="font-bold">Role:</span> {frontmatter.role}</p>
+        <p><span class="font-bold">Outcome:</span> {frontmatter.outcome}</p>
+      </div>
+    </div>
+    <hr class="w-4/5 bg-gradient-to-r from-white via-grey to-white opacity-25 rounded-full h-[2px]">
+    <!-- 2. Rendered HTML will be passed into the default slot. -->
+    <div class="py-4">
+      <slot />
+    </div>
+  </main>
+  </body>
+</html>

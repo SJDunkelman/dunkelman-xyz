@@ -179,6 +179,11 @@ body {
     --block-shadow-color: #D0F0FC;
   }
 
+  .fixed-circle {
+    border: 3px solid var(--block-text-color);
+    box-shadow: 3px 3px var(--block-shadow-color);
+  }
+
   .offset-box {
     border: 2px solid var(--block-text-color);
     background: transparent;
@@ -238,23 +243,14 @@ body {
   stroke: red !important;
 }
 /* Contact form */
-/* .name-brace {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: calc(2.35rem * 5);
+.email-brace-hover {
+  filter: invert(78%) sepia(25%) saturate(457%) hue-rotate(92deg) brightness(88%) contrast(86%);
 }
 
-.twitter-brace {
-  position: absolute;
-  top: 0px;
-  left: calc(2.35rem * 5);
-  width: calc(2.35rem * 16);
+.twitter-brace-hover {
+  filter: invert(17%) sepia(84%) saturate(5146%) hue-rotate(224deg) brightness(100%) contrast(101%);
 }
 
-.website-brace {
-  position: absolute;
-  bottom: 0px;
-  left: calc(2.35rem * 6);
-  width: calc(2.35rem * 19);
-} */
+.website-brace-hover {
+  filter: invert(62%) sepia(96%) saturate(198%) hue-rotate(205deg) brightness(98%) contrast(86%);
+}

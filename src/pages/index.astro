@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import manWorking from "../images/man-working.svg";
 import manIdea from "../images/man-idea.svg";
-import ButtonSpongy from "../components/ButtonSpongy.astro";
+import TestimonyCard from "../components/TestimonyCard.jsx";
 
 import graduationIcon from "../images/icons/graduation-cap.svg"
 import xtoonzBuilding from "../images/building-full.png";
@@ -11,6 +11,9 @@ import developmentIcon from "../images/icons/development.svg";
 import upperContactBrace from "../images/contact/upper-brace.svg";
 import lowerLeftContactBrace from "../images/contact/lower-left-brace.svg";
 import lowerRightContactBrace from "../images/contact/lower-right-brace.svg";
+
+import PortfolioGrid from "../components/PortfolioGrid.jsx";
+import AnnotatedContact from "../components/AnnotatedContact.jsx";
 
 import "../styles/global.css";
 ---
@@ -24,24 +27,29 @@ import "../styles/global.css";
 		</div>
 		<p class="py-6 text-lg">I build zero-to-one products in web3</p>
 		<div class="flex space-x-10">
-			<!-- <ButtonSpongy text="Services" colour="orange" /> -->
-			<div class="orange-button px-4 py-2 accent block">
-				Services
-			</div>
-			<div class="bg-green px-4 py-2 accent block">
-				Portfolio
-			</div>
-			<div class="purple-button px-4 py-2 accent block">
-				Contact
-			</div>
+			<a href="/#services">
+				<div class="orange-button px-4 py-2 accent block">
+					Services
+				</div>
+			</a>
+			<a href="/#clients">
+				<div class="bg-green px-4 py-2 accent block">
+					Portfolio
+				</div>
+			</a>
+			<a href="/#contact">
+				<div class="purple-button px-4 py-2 accent block">
+					Contact
+				</div>
+			</a>
 		</div>
 	</section>
-	<section class="flex flex-col space-y-6">
+	<section class="flex flex-col space-y-6" id="services">
 		<h2 class="text-4xl font-bold">From idea to product</h2>
-		<p class="text-lg">I specialise in turning ideas in to products, rapidly developing.</p>
+		<p class="text-lg">I specialise in rapidly developing ideas into products & startups.</p>
 		<div class="flex w-full">
 			<div class="w-1/2 text-left pt-8">
-				<p>This includes:</p>
+				<p>Add value to your project across the full product lifecycle. Services include:</p>
 				<ul>
 					<li>Brand Strategy</li>
 					<li>UI/UX Design</li>
@@ -54,7 +62,7 @@ import "../styles/global.css";
 			</div>
 		</div>
 	</section>
-	<section class="pt-16 flex flex-col space-y-4 w-4/5">
+	<section class="pt-16 flex flex-col space-y-4 w-4/5" id="about">
 		<h2 class="text-4xl font-bold">About Me</h2>
 		<p class="text-xl py-2">Product minded engineer.<br/>
 		Background in startup & science.</p>
@@ -117,63 +125,12 @@ import "../styles/global.css";
 			</div>
 		</div>
 	</section>
-	<section class="py-16 flex flex-col items-center w-3/4">
-		<h2 class="text-4xl font-bold">What clients are saying</h2>
-		<div class=" py-8 flex space-x-6">
-			<div>
-				&lt;
-			</div>
-			<div class="fixed-block blue-shadow w-full py-1 px-2 text-left">
-				<p>Simon is a brilliant guy. Able to take on a job which was a little bit technically awkward (that many had refused for being too complex) and pulled it off flawlessly. Extremely fast to respond to questions and turn around changes. Planning to work with Simon again.</p>
-				<div class="text-center pt-1">
-					<p>Raymond Thompson</p>
-					<p>XRDC Founder</p>
-				</div>
-				
-			</div>
-			<div>
-				&gt;
-			</div>
-		</div>
-		<h2 class="text-4xl font-bold py-8">Portfolio</h2>
+	<section class="py-16 flex flex-col items-center w-3/4" id="clients">
+		<h2 class="text-4xl font-bold pb-4">What clients are saying</h2>
+		<TestimonyCard client:visible />
+		<h2 class="text-4xl font-bold py-8" id="portfolio">Portfolio</h2>
 		<p>click to filter by category</p>
-		<div class="flex space-x-4 py-4">
-			<div class="base-shadow cursor-pointer">
-				<div class="offset-box py-0.5 px-2">
-					Web3
-				</div>
-			</div>
-			<div class="base-shadow cursor-pointer">
-				<div class="offset-box py-0.5 px-2">
-					Web
-				</div>
-			</div>
-			<div class="base-shadow cursor-pointer">
-				<div class="offset-box py-0.5 px-2">
-					SaaS
-				</div>
-			</div>
-			<div class="base-shadow cursor-pointer">
-				<div class="offset-box py-0.5 px-2">
-					Other
-				</div>
-			</div>
-		</div>
-		<div class="w-full h-full flex flex-col">
-			<div class="h-72 overflow-clip">
-				<img src={xtoonzBuilding} alt="X-Toonz Social Club" class="object-cover" />
-			</div>
-			<div class="py-1 px-2 rounded-bl-lg rounded-br-lg border-2 border-t-0 border-light-grey relative">
-				<div class="base-shadow no-hover absolute top-2 left-2">
-					<div class="offset-box py-0.5 px-2">
-						Web3
-					</div>
-				</div>
-				<p class="text-4xl font-semibold">X-Toonz</p>
-				<p>Social club for the decentralised in Miami, FL.</p>
-				<p class="text-right underline">more details &gt;&gt;</p>
-			</div>
-		</div>
+		<PortfolioGrid client:load />
 	</section>
 	<section class="w-full">
 		<h2 class="text-4xl font-bold">Under Construction</h2>
@@ -206,26 +163,15 @@ import "../styles/global.css";
 				</div>
 			</div>
 	</section>
-	<section class="py-16 flex flex-col items-center w-3/4">
+	<section class="py-16 flex flex-col items-center w-3/4" id="contact">
 		<h2 class="text-4xl font-bold">Contact</h2>
-		<div class="w-content flex flex-col">
-			<div class="flex justify-end">
-				<div class="w-[65%] flex flex-col items-center mr-[15%] contact-brace">
-					<p>Twitter</p>
-					<img src={upperContactBrace} alt="Twitter @flatpackfintech" />
-				</div>
-			</div>
-			<p class="text-xl md:text-3xl tracking-widest whitespace-nowrap">simon@flatpackfintech.com</p>
-			<div class="relative">
-				<div class="w-[26%] mt-1 flex flex-col items-center z-0 absolute left-0 hover contact-braces">
-					<img src={lowerLeftContactBrace} alt="Twitter @flatpackfintech" />
-					<p>Email</p>
-				</div>
-				<div class="w-[75%] flex flex-col items-center z-10 absolute right-0">
-					<img src={lowerRightContactBrace} alt="Twitter @flatpackfintech" />
-					<p>Blog</p>
-				</div>
-			</div>
-		</div>
+		<p class="py-4">hover for more details</p>
+		<AnnotatedContact client:visible />
 	</section>
+	<div class="flex pt-20 pb-2 space-x-6">
+		<a href="#services" class="hover:text-green">Services</a>
+		<a href="#services" class="hover:text-purple">About</a>
+		<a href="#services" class="hover:text-orange">Clients</a>
+		<a href="#services" class="hover:text-deep-blue">Portfolio</a>
+	</div>
 </BaseLayout>
