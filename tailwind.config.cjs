@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	options: {
-		safelist: ["bg-orange", "group-foo-hover:text-deep-blue"],
+		safelist: ["bg-orange", "group-foo-hover:text-deep-blue", "border-light-grey"],
 	},
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {

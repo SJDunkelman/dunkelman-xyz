@@ -157,7 +157,8 @@ import "../styles/global.css";
 		<h2 class="text-4xl font-bold pb-4">What clients are saying</h2>
 		<TestimonyCard client:visible />
 		<h2 class="text-4xl font-bold py-8" id="portfolio">Portfolio</h2>
-		<p>click to filter by category</p>
+		<p class="hidden md:block">click to filter by category</p>
+		<p class="md:hidden">tap to filter by category</p>
 		<PortfolioGrid client:load />
 	</section>
 	<section class="w-full">
