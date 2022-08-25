@@ -4,7 +4,7 @@ title: Primordia.io
 summary: Community hub for Moonrunners NFT project
 role: Head of Product & Strategy
 outcome: Upcoming NFT launch @ Art Basel Miami, FL.
-image: "/building-full.png"
+image: "/assets/building-full.png"
 draft: false
 ---
 
