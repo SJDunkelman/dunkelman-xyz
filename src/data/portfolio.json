@@ -4,7 +4,7 @@
             "title": "X-Toonz",
             "category": "Web3",
             "imageSrc": "/assets/building-full.png",
-            "postURL": "/posts/primordia-io",
+            "postURL": "/posts/x-toonz",
             "description": "Social club for the decentralised in Miami, FL."
         },
         {
@@ -18,7 +18,7 @@
             "title": "XRPL Market Maker",
             "category": "Web3",
             "imageSrc": "/assets/xrpl-market-maker.png",
-            "postURL": "/posts/primordia-io",
+            "postURL": "/posts/xrpl-market-maker",
             "description": "Market maker trading system on the Ripple ledger"
         },
 
@@ -26,21 +26,21 @@
             "title": "Lunatics.wtf",
             "category": "Web3",
             "imageSrc": "/assets/lunatics.png",
-            "postURL": "/posts/primordia-io",
+            "postURL": "/posts/lunatics-wtf",
             "description": "10,000 Generated PFP NFT collection on Ethereum"
         },
         {
             "title": "Feeling Mutual",
             "category": "Web",
             "imageSrc": "/assets/feeling-mutual.png",
-            "postURL": "/posts/primordia-io",
+            "postURL": "/posts/feeling-mutual",
             "description": "An award winning research agency re-imagined"
         },
         {
             "title": "Wealth Sherpa",
             "category": "SaaS",
             "imageSrc": "/assets/wealth-sherpa.png",
-            "postURL": "/posts/primordia-io",
+            "postURL": "/posts/wealth-sherpa",
             "description": "Automated compliance software for Financial Advisers"
         }
     ]
