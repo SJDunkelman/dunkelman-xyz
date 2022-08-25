@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
-import chevronLeft from "../images/icons/chevron-left.svg";
-import chevronRight from "../images/icons/chevron-right.svg";
+import quoteLeft from "../images/icons/quote-left.svg";
+// import chevronRight from "../images/icons/chevron-right.svg";
+import useWindowDimensions from "../components/utils/useWindowDimensions.js";
 
 function TestimonyCard(){
     const testimonyData = [
@@ -51,8 +52,31 @@ function TestimonyCard(){
         paginationArr.push(<div key={i} className={"fixed-circle cursor-pointer p-2 rounded-full " + (i === testimonyIndex ? "bg-deep-blue" : "bg-white")} onClick={() => setTestimony(i)}/>)
     }
 
-    return (
+    const {width, height} = useWindowDimensions();
+    const isMobile = width < 768;
+    
+
+    let testimonyElement = <></>;
+    if (isMobile === true) {
+        testimonyElement = 
         <div className="flex flex-col space-y-4 items-center w-full">
+            <div className="flex justify-start w-full">
+                <img src={quoteLeft} alt="Quotation" className="w-8 opacity-25" />
+            </div>
+            <p className="text-justify">{testimony.text}</p>
+            <div className="text-center pt-2">
+                <p>{testimony.name}</p>
+                <p className="text-sm font-bold">{testimony.company}</p>
+                <p className="text-sm">{testimony.title}</p>
+            </div>
+            <div className="flex space-x-4">
+                {/* {<div className="border-2 p-2 rounded-full" /> * 3} */}
+                {paginationArr}
+            </div>
+        </ div>;
+    } else {
+        testimonyElement =
+            <div className="flex flex-col space-y-4 items-center w-full">
             <div className="flex space-x-4 justify-center items-center">
                 <div className="flex items-center text-3xl cursor-pointer" onClick={decreaseTestimonyIndex}>
                     &lt;
@@ -75,7 +99,11 @@ function TestimonyCard(){
                 {/* {<div className="border-2 p-2 rounded-full" /> * 3} */}
                 {paginationArr}
             </div>
-        </div>
+        </div>;
+    };
+
+    return (
+        testimonyElement
     )
 }
 
