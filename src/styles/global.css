@@ -254,3 +254,13 @@ body {
 .website-brace-hover {
   filter: invert(62%) sepia(96%) saturate(198%) hue-rotate(205deg) brightness(98%) contrast(86%);
 }
+
+
+ul.services > li {
+  padding-left: 1rem;
+  text-indent: -0.7rem;
+}
+
+ul.services > li::before {
+  content: "🚀 ";
+}

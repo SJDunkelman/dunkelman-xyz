@@ -16,12 +16,12 @@ function TestimonyCard(){
             "company": "Effective Change Management Ltd",
             "title": "Senior Consultant",
         },
-        {
-            "text": "He make website good.",
-            "name": "Tom Woodnutt",
-            "company": "Feeling Mutual",
-            "title": "Founder",
-        },
+        // {
+        //     "text": "He make website good.",
+        //     "name": "Tom Woodnutt",
+        //     "company": "Feeling Mutual",
+        //     "title": "Founder",
+        // },
     ]
 
     const [testimonyIndex, setTestimony] = useState(0);
