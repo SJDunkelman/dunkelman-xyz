@@ -11,8 +11,8 @@ import NavigationBar from "../components/NavigationBar.jsx";
   </head>
   <body>
     <main class="container mx-auto py-10 text-center flex flex-col justify-center items-center px-2 md:px-20 lg:px-32">
-      <NavigationBar />
-      <div class="w-full h-content overflow-clip relative">
+      <NavigationBar client:load />
+      <div class="w-full h-content max-h-96 overflow-clip relative">
 				<img src={frontmatter.image} alt="Header image" class="object-cover" />
         <div class="w-full h-full bg-white opacity-50 absolute top-0 left-0" />
         <h1 class="text-5xl font-bold text-grey absolute left-0 top-1/2 translate-x-4 -translate-y-1/2">{frontmatter.title}</h1>

@@ -6,9 +6,10 @@ import useWindowDimensions from "./utils/useWindowDimensions";
 
 
 export default function NavigationBar(){
-    const [isOpen, setisOpen] = useState(true);
+    const [isOpen, setisOpen] = useState(false);
 
     function handleClick() {
+      console.log('Clicked!');
       setisOpen(!isOpen);
     }
 
@@ -39,7 +40,7 @@ export default function NavigationBar(){
                 </a>
               </ul> 
               {/* Mobile */}
-              <button className="lg:hidden" onClick={handleClick}>
+              <button className="lg:hidden" onClick={() => setisOpen(!isOpen)} >
                   {isOpen && (<img src={hamburgerIcon} alt="Open Mobile menu" className="h-8" />)}
                   {!isOpen && (<img src={closeIcon} alt="Close Mobile Menu" className="h-8" />)}
                 </button>
