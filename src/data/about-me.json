@@ -1,0 +1,105 @@
+{
+    "experience": [
+        {
+            "company": "Freelance",
+            "role": "Software Engineer",
+            "time": "2021-"
+        },
+        {
+            "company": "Wealth Sherpa",
+            "role": "Founder",
+            "time": "2020-2021"
+        },
+        {
+            "company": "Imperial College",
+            "role": "Research Assistant",
+            "time": "2020"
+        },
+        {
+            "company": "St James Place",
+            "role": "Analyst",
+            "time": "2019-2020"
+        },
+        {
+            "company": "Voyager Solutions",
+            "role": "Automation Graduate",
+            "time": "2018-2019"
+        }
+    ],
+    "development": [
+        {
+            "skill": "Python",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "SQL",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "C++",
+            "rating_1_to_3": 2
+        },
+        {
+            "skill": "Vyper",
+            "rating_1_to_3": 2
+        },
+        {
+            "skill": "Solidity",
+            "rating_1_to_3": 1
+        },
+        {
+            "skill": "React JS",
+            "rating_1_to_3": 2
+        },
+        {
+            "skill": "Tailwind CSS",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "Docker",
+            "rating_1_to_3": 2
+        },
+        {
+            "skill": "Fast API",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "Pandas",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "Numpy",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "Pydantic",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "PyTorch",
+            "rating_1_to_3": 2
+        }
+    ],
+    "design": [
+        {
+            "skill": "Photoshop",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "Adobe XD",
+            "rating_1_to_3": 3
+        },
+        {
+            "skill": "Illustrator",
+            "rating_1_to_3": 2
+        },
+        {
+            "skill": "After Effects",
+            "rating_1_to_3": 1
+        },
+        {
+            "skill": "After Effects",
+            "rating_1_to_3": 1
+        }
+    ]
+}
