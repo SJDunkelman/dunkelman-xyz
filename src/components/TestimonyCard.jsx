@@ -17,12 +17,12 @@ function TestimonyCard(){
             "company": "Effective Change Management Ltd",
             "title": "Senior Consultant",
         },
-        // {
-        //     "text": "He make website good.",
-        //     "name": "Tom Woodnutt",
-        //     "company": "Feeling Mutual",
-        //     "title": "Founder",
-        // },
+        {
+            "text": "Simon is great at interpretting commercial, strategic objectives, and fulfilling them with the most suitable technology. Listens well to feedback but isn't afraid to challenge it and has a strong aesthetic sensibility for design.",
+            "name": "Tom Woodnutt",
+            "company": "Feeling Mutual",
+            "title": "Founder",
+        },
     ]
 
     const [testimonyIndex, setTestimony] = useState(0);

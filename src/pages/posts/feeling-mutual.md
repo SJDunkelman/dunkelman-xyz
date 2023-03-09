@@ -1,10 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Primordia.io
+title: Feeling Mutual
 summary: An award winning research agency re-imagined
 role: Contracted developer
-outcome: Taken over by community which has formed a DAO & a game development studio.
-image: "/assets/primordia-den.png"
+outcome: A new modernised website
+image: "/assets/feeling-mutual.png"
 draft: false
 ---
 
