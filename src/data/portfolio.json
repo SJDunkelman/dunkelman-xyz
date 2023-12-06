@@ -32,15 +32,6 @@
             "description": "Market maker trading system on the Ripple ledger",
             "sold": false
         },
-
-        {
-            "title": "Lunatics.wtf",
-            "category": "Web3",
-            "imageSrc": "/assets/lunatics.png",
-            "postURL": "/posts/lunatics-wtf",
-            "description": "10,000 Generated PFP NFT collection on Ethereum",
-            "sold": false
-        },
         {
             "title": "Feeling Mutual",
             "category": "Web",
