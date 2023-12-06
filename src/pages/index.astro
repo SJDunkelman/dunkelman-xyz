@@ -23,7 +23,7 @@ import "../styles/global.css";
 			<!-- <img src={manWorking} alt="Man working" class="w-80 h-auto" /> -->
 			<HeroAnimation client:load />
 		</div>
-		<p class="py-6 text-lg">I build zero-to-one products in web3</p>
+		<p class="py-6 text-lg">I build zero-to-one digital products</p>
 		<div class="flex ml-4 md:ml-0 space-x-2 md:space-x-10">
 			<a href="/#services">
 				<div class="orange-button px-4 py-2 accent block">
@@ -42,9 +42,6 @@ import "../styles/global.css";
 			</a>
 		</div>
 		<div class="flex text-xl pt-4 justify-center space-x-4 ">
-			<a href="https://www.twitter.com/flatpackfintech">
-				<img src={twitterIcon} alt="Twitter" class="h-6 opacity-25 hover:opacity-100" />
-			</a>
 			<a href="https://www.linkedin.com/in/simondunkelman/">
 				<img src={linkedinIcon} alt="Twitter" class="h-6 opacity-25 hover:opacity-100" />
 			</a>
@@ -53,8 +50,8 @@ import "../styles/global.css";
 	<section class="flex flex-col pt-20 space-y-6 w-full" id="services">
 		<h2 class="text-4xl font-bold">From idea to product</h2>
 		<p class="text-lg">I specialise in rapidly developing ideas into products & startups.</p>
-		<div class="flex flex-col md:flex-row w-full justify-center items">
-			<div class="flex flex-col justify-evenly w-full md:w-2/5 text-left pt-2 md:pt-8 text-lg">
+		<div class="flex flex-col md:flex-row w-full justify-center items-top">
+			<div class="flex flex-col justify-evenly w-full md:w-2/5 text-left text-lg">
 				<p class="whitespace-no-wrap">Add value to your project across the full product lifecycle.</p>
 				<div>
 					<p class="py-2 md:py-0">Services include:</p>
@@ -84,7 +81,7 @@ import "../styles/global.css";
 	<section class="py-16 flex flex-col items-center w-full lg:w-3/4" id="clients">
 		<h2 class="text-4xl font-bold pb-4">What clients are saying</h2>
 		<TestimonyCard client:visible />
-		<h2 class="text-4xl font-bold py-8" id="portfolio">Portfolio</h2>
+		<h2 class="text-4xl font-bold pt-16" id="portfolio">Portfolio</h2>
 		<p class="hidden md:block">click to filter by category</p>
 		<p class="md:hidden">tap to filter by category</p>
 		<PortfolioGrid client:load />
@@ -92,20 +89,20 @@ import "../styles/global.css";
 
 	<section class="w-full">
 		<h2 class="text-4xl font-bold">Under Construction</h2>
-		<p class="py-4">I’m always building, either alone or collaboratively.<br/>
+		<p class="py-4">I&apos;m always building, either alone or collaboratively.<br/>
 			These areas currently include:</p>
 			<div class="flex flex-col space-y-4">
 				<div class="flex flex-col md:flex-row items-center py-1">
 					<div class="text-lg lg:text-2xl bold text-center md:text-right whitespace-nowrap w-full md:w-1/2">
-						ERC721 Wrapped ERC-20 Tokens
+						LLM Agents Platform
 					</div>
 					<div class="w-full md:w-1/3 px-6">
-						<div class="progress-bar half-complete" />
+						<div class="progress-bar almost-complete" />
 					</div>
 				</div>
-				<div class="flex flex-col md:flex-row items-center py-1">
+				<!-- <div class="flex flex-col md:flex-row items-center py-1">
 					<div class="text-lg lg:text-2xl bold text-center md:text-right whitespace-nowrap w-full md:w-1/2">
-						On-Chain Pool Betting
+						
 					</div>
 					<div class="w-full md:w-1/3 px-6">
 						<div class="progress-bar just-started" />
@@ -118,14 +115,13 @@ import "../styles/global.css";
 					<div class="w-full md:w-1/3 px-6">
 						<div class="progress-bar just-started" />
 					</div>
-				</div>
+				</div> -->
 			</div>
 	</section>
-	<section class="py-16 flex flex-col items-center w-3/4" id="contact">
+
+	<section class="pt-16 flex flex-col items-center w-3/4" id="contact">
 		<h2 class="text-4xl font-bold">Contact</h2>
-		<p class="py-4 hidden md:visible">hover for more details</p>
-		<p class="py-4 md:hidden">tap for more details</p>
-		<AnnotatedContact client:visible />
+		<a class=" py-6 text-xl md:text-3xl tracking-widest whitespace-nowrap hover:text-green hover:underline hover:underline-offset-8" href="mailto:simon@dunkelman.xyz">simon@dunkelman.xyz</a>
 	</section>
 	<div class="flex pt-20 pb-2 space-x-6">
 		<a href="#services" class="hover:text-green">Services</a>
@@ -133,5 +129,6 @@ import "../styles/global.css";
 		<a href="#clients" class="hover:text-orange">Clients</a>
 		<a href="#portfolio" class="hover:text-deep-blue">Portfolio</a>
 	</div>
+	
 	<p class="text-sm pt-4 pb-2">Made by Simon Dunkelman using Astro JS 🚀, Tailwind CSS 🌪 & <a href="https://airbnb.io/lottie/#/" class="underline hover:text-purple">Lottie (AirBnB)</a></p>
 </BaseLayout>

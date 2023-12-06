@@ -1,9 +1,19 @@
 {
     "experience": [
         {
+            "company": "Smth AI",
+            "role": "CTO / Co-Founder",
+            "time": "2023-"
+        },
+        {
+            "company": "Health Potion",
+            "role": "CTO / Co-Founder",
+            "time": "2022-2023"
+        },
+        {
             "company": "Freelance",
             "role": "Software Engineer",
-            "time": "2021-"
+            "time": "2021-2022"
         },
         {
             "company": "Wealth Sherpa",
@@ -45,11 +55,11 @@
         },
         {
             "skill": "Solidity",
-            "rating_1_to_3": 1
+            "rating_1_to_3": 2
         },
         {
             "skill": "React JS",
-            "rating_1_to_3": 2
+            "rating_1_to_3": 3
         },
         {
             "skill": "Tailwind CSS",

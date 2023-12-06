@@ -264,3 +264,31 @@ ul.services > li {
 ul.services > li::before {
   content: "🚀 ";
 }
+
+.carousel-inner::before,
+.carousel-inner::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 110px;
+  pointer-events: none;
+}
+
+.carousel-inner::before {
+  top: 0;
+  background: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsla(27, 100%, 48%, 1) 100%
+  );
+}
+
+.carousel-inner::after {
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    hsla(27, 100%, 48%, 1) 0%,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+}

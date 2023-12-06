@@ -27,16 +27,16 @@ export default function NavigationBar(){
               {/* Desktop Links */}
               <ul className="hidden lg:flex items-center w-auto whitespace-nowrap lg:space-x-12">
                 <a href="/#about">
-                  <li className="no-underline font-light hover:text-white">About</li>
+                  <li className="no-underline font-light hover:underline underline-offset-4e">About</li>
                   </a>
                 <a href="/#services">
-                  <li className="no-underline font-light hover:text-white">Services</li>
+                  <li className="no-underline font-light hover:underline underline-offset-4">Services</li>
                 </a>
                 <a href="/#clients">
-                  <li className="no-underline font-light hover:text-white">Portfolio</li>
+                  <li className="no-underline font-light hover:underline underline-offset-4">Portfolio</li>
                 </a>
                 <a href="/#contact">
-                  <li className="no-underline font-light hover:text-white">Contact</li>
+                  <li className="no-underline font-light hover:underline underline-offset-4">Contact</li>
                 </a>
               </ul> 
               {/* Mobile */}

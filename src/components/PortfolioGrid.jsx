@@ -44,10 +44,14 @@ export default function PortfolioGrid(){
     
     let filteredData = [];
 
-    PortfolioJson["data"].forEach(function(item){
-        if(searchCategoryArray.includes(item.category)){
-            filteredData.push(item);
+    PortfolioJson["data"].forEach(function (item) {
+      const categories = Array.isArray(item.category) ? item.category : [item.category];
+      for (const category of categories) {
+        if (searchCategoryArray.includes(category)) {
+          filteredData.push(item);
+          break;
         }
+      }
     });
 
     const unselectedBoxClasses = "";
@@ -77,7 +81,7 @@ export default function PortfolioGrid(){
             </div>
         </div>
         {filteredData.map((item, i) => (
-            <PortfolioCard title={item.title} imageSrc={item.imageSrc} description={item.description} postURL={item.postURL} category={item.category} key={i} />
+            <PortfolioCard title={item.title} imageSrc={item.imageSrc} description={item.description} postURL={item.postURL} category={item.category} key={i} sold={item.sold} />
         ))}
     </div>
     )

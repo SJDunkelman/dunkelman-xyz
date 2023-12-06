@@ -35,7 +35,7 @@ export default function AboutSection(){
 
     return (
         <div class="flex flex-col md:flex-row justify-center items-center space-x-2 h-content">
-        <div class="flex flex-col space-y-4 md:h-[22rem] justify-center w-80">
+        <div class="flex flex-col space-y-4 md:h-[22rem] justify-center w-96">
             <div class="border-2 border-light-grey flex space-x-4 py-0.5 px-1">
                 <div>
                     <img src={graduationIcon} alt="Graduation cap" class="w-16 h-auto" />
@@ -60,7 +60,7 @@ export default function AboutSection(){
             </div>
         </div>
         <p class="text-3xl">+</p>
-        <div class="border-2 border-light-grey py-1 px-2 h-full md:min-h-[22rem] flex flex-col items-center w-4/5 lg:w-1/4">
+        <div class="border-2 border-light-grey py-1 px-2 h-full md:min-h-[22rem] flex flex-col items-center w-96 lg:w-1/4">
             <p class="text-2xl pb-1">Experience</p>
             <div class="flex items-center">
                 <ul class="text-left text-sm space-y-2">

@@ -1,25 +1,36 @@
 {
     "data": [
         {
+            "title": "Health Potion",
+            "category": ["Web3", "SaaS"],
+            "imageSrc": "/assets/health-potion.png",
+            "postURL": "/posts/health-potion",
+            "description": "The first wallet insurance protecting web3 users from phishing scams",
+            "sold": false
+        },
+        {
             "title": "X-Toonz",
             "category": "Web3",
             "imageSrc": "/assets/building-full.png",
             "postURL": "/posts/x-toonz",
-            "description": "Social club for the decentralised in Miami, FL."
+            "description": "Social club for the decentralised in Miami, FL.",
+            "sold": false
         },
         {
             "title": "Primordia.io",
             "category": "Web3",
             "imageSrc": "/assets/primordia-den.png",
             "postURL": "/posts/primordia-io",
-            "description": "A central hub for community-driven Moonrunner NFT projects"
+            "description": "A central hub for community-driven Moonrunner NFT projects",
+            "sold": true
         },
         {
             "title": "XRPL Market Maker",
             "category": "Web3",
             "imageSrc": "/assets/xrpl-market-maker.png",
             "postURL": "/posts/xrpl-market-maker",
-            "description": "Market maker trading system on the Ripple ledger"
+            "description": "Market maker trading system on the Ripple ledger",
+            "sold": false
         },
 
         {
@@ -27,21 +38,24 @@
             "category": "Web3",
             "imageSrc": "/assets/lunatics.png",
             "postURL": "/posts/lunatics-wtf",
-            "description": "10,000 Generated PFP NFT collection on Ethereum"
+            "description": "10,000 Generated PFP NFT collection on Ethereum",
+            "sold": false
         },
         {
             "title": "Feeling Mutual",
             "category": "Web",
             "imageSrc": "/assets/feeling-mutual.png",
             "postURL": "/posts/feeling-mutual",
-            "description": "An award winning research agency re-imagined"
+            "description": "An award winning research agency re-imagined",
+            "sold": false
         },
         {
             "title": "Wealth Sherpa",
             "category": "SaaS",
             "imageSrc": "/assets/wealth-sherpa.png",
             "postURL": "/posts/wealth-sherpa",
-            "description": "Automated compliance software for Financial Advisers"
+            "description": "Automated compliance software for Financial Advisers",
+            "sold": false
         }
     ]
 }

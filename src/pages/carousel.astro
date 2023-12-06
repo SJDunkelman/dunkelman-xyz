@@ -1,0 +1,13 @@
+---
+import VerticalCarousel from "../components/VerticalCarousel.jsx";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import data from "../data/about-me-vertical.json";
+---
+<BaseLayout>
+    <section class="max-h-screen">
+        <div class="flex flex-col items-center justify-center h-full">
+            <h1>HEllo</h1>
+            <VerticalCarousel data={data.slides} leadingText={data.leadingText} />
+        </div>
+    </section>
+</BaseLayout>

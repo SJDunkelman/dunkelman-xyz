@@ -8,3 +8,5 @@ image: "/assets/building-full.png"
 draft: false
 ---
 
+Update December 2022: Due to market conditions we've decided to postpone the launch of this project.
+
