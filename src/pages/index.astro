@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '@/globals.css'
+import { Github, Mail, Twitter } from "lucide-astro";
+import EmailButton from '@/components/EmailButton.jsx';
+import {Button} from '@/components/ui/button.jsx';
+import ProjectsTable from '@/components/ProjectsTable.jsx';
+import SkillsRadial from '@/components/SkillsRadial.jsx';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="max-w-2xl px-6 md:px-0 mx-auto font-source text-left flex flex-col space-y-6 pt-3 pb-20 font-light">
+        <header class="w-full flex items-center justify-end space-x-2">
+			<EmailButton client:load />
+			<a href="https://github.com/SJDunkelman" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                    <Github className="w-4 h-4 text-black" />
+                </Button>
+            </a>
+			<a href="https://x.com/latent_sculptor" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="icon">
+                    <Twitter className="w-4 h-4 text-black" />
+                </Button>
+            </a>
+        </header>
+		<h1 class="text-xl md:text-2xl">Simon Dunkelman</h1>
+		<p>I&apos;m a founder, product builder & software engineer focused on AI.</p>
+		<p>Some things about me:</p>
+		<ul class="list-disc">
+			<li class="ml-10">On a mission to make AI agents productive</li>
+			<li class="ml-10">Currently building agentic systems in Wealth Managment as CTO of August Group</li>
+			<li class="ml-10">Entrepreneur First alumni (LD19)</li>
+			<li class="ml-10">Started three companies</li>
+			<li class="ml-10">MSc in Risk Management & Financial Engineering @ Imperial College</li>
+			<li class="ml-10">Undergraduate in Chemistry (MChem) focused on computational chemistry</li>
+			<li class="ml-10">I row competitively at Furnivall Sculling Club</li>
+			<li class="ml-10">Live in London</li>
+		</ul>
+		<p>Things I&apos;ve built:</p>
+		<div class="w-full rounded-lg shadow-lg bg-gray-100 overflow-hidden">
+            {/* Window header */}
+			<div class="relative w-full h-8 bg-gradient-to-b from-gray-200 to-gray-300 flex items-center px-4">
+                {/* Traffic light buttons */}
+				<div class="flex space-x-2">
+					<div class="w-3 h-3 rounded-full bg-red-500"></div>
+					<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+					<div class="w-3 h-3 rounded-full bg-green-500"></div>
+				</div>
+                {/* Window title */}
+				<div class="absolute -translate-x-1/2 left-1/2 text-center text-sm font-semibold text-gray-700">
+					<!--<div class="flex space-x-1 items-center group cursor-pointer">-->
+                    <!--    <div class="rounded-full bg-[#333] group-hover:bg-[#6e5494] flex items-center justify-center w-6 h-6 p-1">-->
+					<!--		<Github class="text-[#f5f5f5]" />-->
+                    <!--    </div>-->
+					<!--	<p class="group-hover:text-[#6e5494]">SJDunkelman</p>-->
+					<!--</div>-->
+                    <p>Startups & Products</p>
+				</div>
+			</div>
+            {/* Window content */}
+			<div class="p-4">
+                <ProjectsTable />
+			</div>
+		</div>
+		<p>Other experience:</p>
+        <ul class="list-disc">
+            <li class="ml-10">CTO @ August Group <span class="text-sm text-slate-700">[2024-]</span></li>
+            <ul class="list-disc">
+                <li class="ml-16">August Group is an investment fund consolidating UK wealth management firms with £280 million AUM</li>
+                <li class="ml-16">I lead the tech subsidiary Overmind, our AI platform for both internal and external advice firms</li>
+                <li class="ml-16">I also oversee the technology strategy for our internal firms</li>
+            </ul>
+            <li class="ml-10">Full-Stack SWE Contractor <span class="text-sm text-slate-700">[2021-2022]</span></li>
+			<ul class="list-disc">
+				<li class="ml-16">Developed a market maker trading system including microservices API and desktop app for the treasury of a crypto token to reduce the bid-ask spread</li>
+                <li class="ml-16">Developed ETL pipeline for scraping and analysing marketplace data to trade price inefficiencies</li>
+                <li class="ml-16">Refactored an AWS S3, Lambda function, API Gateway & SQS data pipeline for production for med-tech application</li>
+            </ul>
+			<li class="ml-10">Research Assistant @ Imperial College <span class="text-sm text-slate-700">[2020]</span></li>
+            <ul class="list-disc">
+                <li class="ml-16">Implemented Deep Learning NLP models as proof-of-concept for Google Deepmind Word2Vec research; improved computational efficiency using negative sampling techniques</li>
+            </ul>
+			<li class="ml-10">Analyst @ St James Place <span class="text-sm text-slate-700">[2018-2020]</span></li>
+			<ul class="list-disc">
+				<li class="ml-16">Developed VBA Excel analysis tools for client portfolio rebalancing, prepared research summaries and market reports for clients</li>
+			</ul>
+        </ul>
+		<!--<div class="w-full h-96 flex items-center justify-center">-->
+		<!--	<div class="w-2/3 h-full">-->
+		<!--		<SkillsRadial client:visible />-->
+		<!--	</div>-->
+		<!--</div>-->
+		<p>Beliefs I hold (as of mid 2024):</p>
+		<ol class="list-decimal">
+			<li class="ml-10">The future of software is amorphous and will eventually be generated at runtime</li>
+			<li class="ml-10">Social graphs are becoming increasingly closed and fragment; curation is the current value transfer mechanism of the internet</li>
+			<li class="ml-10">Consolidation through acquisition will be one of the largest drivers of AI adoption in traditional markets (wealth management, accounting, manufacturing etc.)</li>
+		</ol>
+	</main>
+</Layout>
