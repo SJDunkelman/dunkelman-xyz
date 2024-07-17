@@ -9,9 +9,7 @@ import {
 	TableRow,
 } from "@/components/ui/table"
 import { ChevronRight } from "lucide-react";
-import { BiLogoPostgresql, BiLogoPython, BiLogoGoLang } from "react-icons/bi";
-import { TbBrandSupabase } from "react-icons/tb";
-import { SiSolidity, SiReact } from "react-icons/si";
+import TechStackIcons from "@/components/TechStackIcon.jsx";
 
 const projects = [
 	{
@@ -35,6 +33,14 @@ const projects = [
 		status: "testing",
 		techStack: ["Go", "React", "Python"],
 		notes: "Productivity RPG to gamify time management using vision models",
+		link: "/projects/c",
+		date: new Date('2024-07-10'),
+	},
+	{
+		name: "",
+		status: "testing",
+		techStack: ["ReactNative", "Python"],
+		notes: "Word puzzle game that uses AI-driven semantic knowledge graphs",
 		link: "/projects/c",
 		date: new Date('2024-07-10'),
 	},
@@ -83,15 +89,6 @@ const statusColors = {
 	paused: 'bg-slate-300 text-slate-800',
 };
 
-const techIcons = {
-	Python: <BiLogoPython size={16} className="text-[#4584B6]" />,
-	React: <SiReact size={16} className="text-[#008bb9]" />,
-	Postgres: <BiLogoPostgresql size={16} />,
-	Supabase: <TbBrandSupabase size={16} />,
-	Solidity: <SiSolidity size={16} />,
-	Go: <BiLogoGoLang size={16} />,
-};
-
 export default function ProjectsTable() {
 	return (
 		<Table>
@@ -121,17 +118,7 @@ export default function ProjectsTable() {
                             </span>
 						</TableCell>
 						<TableCell>
-							<div className="grid grid-cols-3 gap-2 w-[75px]">
-								{project.techStack.map((tech) => (
-									<span
-										key={tech}
-										className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center"
-										title={tech}
-									>
-										{techIcons[tech]}
-									</span>
-								))}
-							</div>
+							<TechStackIcons techStack={project.techStack} />
 						</TableCell>
 						<TableCell>{project.notes}</TableCell>
 						<TableCell>
