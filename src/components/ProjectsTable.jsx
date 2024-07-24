@@ -17,15 +17,15 @@ const projects = [
 		status: "live",
 		techStack: ["Python", "React", "Postgres"],
 		notes: "Community intelligence SaaS for Skool.com communities",
-		link: "/projects/a",
+		link: "https://www.skool.report/",
 		date: new Date('2024-05-01'),
 	},
 	{
 		name: "Wealth Sherpa",
 		status: "dead",
-		techStack: ["React", "Supabase"],
+		techStack: ["React", "Python", "Electron"],
 		notes: "Suitability letter automation SaaS for financial advisors",
-		link: "/projects/b",
+		link: "/writing/wealth-sherpa",
 		date: new Date('2020-09-01'),
 	},
 	{
@@ -33,15 +33,15 @@ const projects = [
 		status: "testing",
 		techStack: ["Go", "React", "Python"],
 		notes: "Productivity RPG to gamify time management using vision models",
-		link: "/projects/c",
+		link: "",
 		date: new Date('2024-07-10'),
 	},
 	{
 		name: "",
 		status: "testing",
 		techStack: ["ReactNative", "Python"],
-		notes: "Word puzzle game that uses AI-driven semantic knowledge graphs",
-		link: "/projects/c",
+		notes: "Word puzzle game powered by AI-driven semantic knowledge graphs",
+		link: "",
 		date: new Date('2024-07-10'),
 	},
 	{
@@ -49,7 +49,7 @@ const projects = [
 		status: "development",
 		techStack: ["Go", "Python", "React", "Postgres"],
 		notes: "Personalised Development Environment for LLMs",
-		link: "/projects/c",
+		link: "",  // /writing/the-problem-with-chatgpt
 		date: new Date('2024-08-01'),
 	},
 	{
@@ -57,7 +57,7 @@ const projects = [
 		status: "paused",
 		techStack: ["Python", "Postgres"],
 		notes: "Conversational AI notes app",
-		link: "/projects/c",
+		link: "",
 		date: new Date('2024-02-01'),
 	},
 	{
@@ -122,9 +122,13 @@ export default function ProjectsTable() {
 						</TableCell>
 						<TableCell>{project.notes}</TableCell>
 						<TableCell>
-							<a href={project.link} className="flex items-center text-blue-600 hover:text-blue-800">
-								More <ChevronRight size={16} />
-							</a>
+							{project.link ? (
+								<a href={project.link} className="flex items-center text-blue-600 hover:text-blue-800">
+									More <ChevronRight size={16} />
+								</a>
+							) : null
+							}
+
 						</TableCell>
 					</TableRow>
 				))}

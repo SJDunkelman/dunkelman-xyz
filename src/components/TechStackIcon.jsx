@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiLogoPostgresql, BiLogoPython, BiLogoGoLang } from "react-icons/bi";
 import { TbBrandSupabase } from "react-icons/tb";
-import { SiSolidity, SiReact } from "react-icons/si";
+import { SiSolidity, SiReact, SiElectron } from "react-icons/si";
 import {
 	Tooltip,
 	TooltipContent,
@@ -17,6 +17,7 @@ const techIcons = {
 	Supabase: <TbBrandSupabase size={16} />,
 	Solidity: <SiSolidity size={16} />,
 	Go: <BiLogoGoLang size={16} />,
+	Electron: <SiElectron size={16} className="text-[#272937]" />,
 };
 
 const formatTechName = (name) => {
@@ -31,7 +32,7 @@ export default function TechStackIcons({ techStack }) {
 					<Tooltip key={tech}>
 						<TooltipTrigger>
                             <span
-								className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center"
+								className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center"
 							>
                                 {techIcons[tech]}
                             </span>

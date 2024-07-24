@@ -26,10 +26,10 @@ import ProjectsTable from '@/components/ProjectsTable.jsx';
 		<p>I&apos;m a founder, product builder & software engineer focused on AI.</p>
 		<p>Some things about me:</p>
 		<ul class="list-disc">
-			<li class="ml-10">On a mission to make AI agents productive</li>
+            <li class="ml-10">On a mission to make <a href="/ai-agents" class="hover:underline text-blue-500">AI agents productive</a></li>
 			<li class="ml-10">Currently building agentic systems in Wealth Managment as CTO of August Group</li>
 			<li class="ml-10">Entrepreneur First alumni (LD19)</li>
-			<li class="ml-10">Started three companies</li>
+            <li class="ml-10"><a href="/wealth-sherpa" class="hover:underline text-blue-500">Started</a> <a href="/health-potion" class="hover:underline text-blue-500">three</a> <a href="/smth-ai" class="hover:underline text-blue-500">companies</a></li>
 			<li class="ml-10">MSc in Risk Management & Financial Engineering @ Imperial College</li>
 			<li class="ml-10">Undergraduate in Chemistry (MChem) focused on computational chemistry</li>
 			<li class="ml-10">I row competitively at Furnivall Sculling Club</li>
@@ -47,16 +47,9 @@ import ProjectsTable from '@/components/ProjectsTable.jsx';
 				</div>
                 {/* Window title */}
 				<div class="absolute -translate-x-1/2 left-1/2 text-center text-sm font-semibold text-gray-700">
-					<!--<div class="flex space-x-1 items-center group cursor-pointer">-->
-                    <!--    <div class="rounded-full bg-[#333] group-hover:bg-[#6e5494] flex items-center justify-center w-6 h-6 p-1">-->
-					<!--		<Github class="text-[#f5f5f5]" />-->
-                    <!--    </div>-->
-					<!--	<p class="group-hover:text-[#6e5494]">SJDunkelman</p>-->
-					<!--</div>-->
                     <p>Startups & Products</p>
 				</div>
 			</div>
-            {/* Window content */}
 			<div class="p-4">
                 <ProjectsTable client:visible />
 			</div>
@@ -69,30 +62,25 @@ import ProjectsTable from '@/components/ProjectsTable.jsx';
                 <li class="ml-16">I lead the tech subsidiary Overmind, our AI platform for both internal and external advice firms</li>
                 <li class="ml-16">I also oversee the technology strategy for our portfolio companies</li>
             </ul>
-            <li class="ml-10">Full-Stack SWE Contractor <span class="text-sm text-slate-700">[2021-2022]</span></li>
+            <li class="ml-10 mt-3">Full-Stack SWE Contractor <span class="text-sm text-slate-700">[2021-2022]</span></li>
 			<ul class="list-disc">
 				<li class="ml-16">Developed a market maker trading system including microservices API and desktop app for the treasury of a crypto token to reduce the bid-ask spread</li>
                 <li class="ml-16">Developed ETL pipeline for scraping and analysing marketplace data to trade price inefficiencies</li>
                 <li class="ml-16">Refactored an AWS S3, Lambda function, API Gateway & SQS data pipeline for production for med-tech application</li>
             </ul>
-			<li class="ml-10">Research Assistant @ Imperial College <span class="text-sm text-slate-700">[2020]</span></li>
+			<li class="ml-10 mt-3">Research Assistant @ Imperial College <span class="text-sm text-slate-700">[2020]</span></li>
             <ul class="list-disc">
                 <li class="ml-16">Implemented Deep Learning NLP models as proof-of-concept for Google Deepmind Word2Vec research; improved computational efficiency using negative sampling techniques</li>
             </ul>
-			<li class="ml-10">Analyst @ St James Place <span class="text-sm text-slate-700">[2018-2020]</span></li>
+			<li class="ml-10 mt-3">Analyst @ St James Place <span class="text-sm text-slate-700">[2018-2020]</span></li>
 			<ul class="list-disc">
 				<li class="ml-16">Developed VBA Excel analysis tools for client portfolio rebalancing, prepared research summaries and market reports for clients</li>
 			</ul>
         </ul>
-		<!--<div class="w-full h-96 flex items-center justify-center">-->
-		<!--	<div class="w-2/3 h-full">-->
-		<!--		<SkillsRadial client:visible />-->
-		<!--	</div>-->
-		<!--</div>-->
 		<p>Beliefs I hold (as of mid 2024):</p>
 		<ol class="list-decimal">
-			<li class="ml-10">The future of software is amorphous and will eventually be generated at runtime</li>
-			<li class="ml-10">Social graphs are becoming increasingly closed and fragment; curation is the current value transfer mechanism of the internet</li>
+			<li class="ml-10">The <a href="/future-is-amorphous" class="hover:underline text-blue-500">future of software is amorphous</a> and will eventually be generated at runtime</li>
+            <li class="ml-10">Social graphs are becoming increasingly closed and fragment; <a href="/curation-is-value" class="hover:underline text-blue-500">curation is the current value transfer mechanism</a> of the internet</li>
 			<li class="ml-10">Consolidation through acquisition will be one of the largest drivers of AI adoption in traditional markets (wealth management, accounting, manufacturing etc.)</li>
 		</ol>
 	</main>
