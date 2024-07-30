@@ -41,7 +41,7 @@ const projects = [
 		status: "testing",
 		techStack: ["ReactNative", "Python"],
 		notes: "Word puzzle game powered by AI-driven semantic knowledge graphs",
-		link: "",
+		link: "/writing/redacted-word-game",
 		date: new Date('2024-07-10'),
 	},
 	{
