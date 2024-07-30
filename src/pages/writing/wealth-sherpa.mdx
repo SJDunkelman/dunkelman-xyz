@@ -7,13 +7,15 @@ ongoing: false
 description: 'My entrepreneurial education'
 ---
 import ImageCard from '../../components/ImageCard.astro'
+import LandingPageImage from '../../images/writing/wealth-sherpa/wealth-sherpa.png'
+import TerminalImage from "/src/images/writing/wealth-sherpa/terminal.png"
 
 > "Wealth Sherpa helps wealth managers nurture more profitable relationships through automation."
 
 Wealth Sherpa was borne out of seeing the time wastage before and after meetings with clients during my time working as an analyst/paraplanner at St James Place. The end product was a technical success, bringing down the process time of suitability letters from an hour to just a couple of minutes, but a commercial failure which I learned many lessons from.
 
 <ImageCard
-	imageSrc="/src/images/writing/wealth-sherpa/wealth-sherpa.png"
+	imageSrc={LandingPageImage}
 	imageAlt="Wealth Sherpa"
 	subtitle=""
 />
@@ -31,7 +33,7 @@ Over the next year I soaked up as much from lectures and pitch evenings in the I
 Between early 2020 and my graduation in September I started building the PDF extraction and document generation tool. This took many iterations to get to our target accuracy as the fund transfer PDFs were highly variable between investment vehicle types, with the final solution requiring image segmentation (opencv2) and OCR.
 
 <ImageCard
-	imageSrc="/src/images/writing/wealth-sherpa/terminal.png"
+	imageSrc={TerminalImage}
 	imageAlt="Wealth Sherpa CLI Screenshot"
 	subtitle=""
 />
