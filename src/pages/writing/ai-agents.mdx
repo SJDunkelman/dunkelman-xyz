@@ -1,23 +1,87 @@
 ---
 layout: ../../layouts/WritingLayout.astro
 title: 'AI Agents'
-pubDate: 2023-12-10
-lastEdit: 2024-07-01
+pubDate: 2024-07-28
+lastEdit:
 ongoing: true
-description: 'This is the first post of my new Astro blog.'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
+description: 'Thoughts on AI agents aka the future of work'
 ---
 
-Write about learnings from ai agents
+Over the past 2 years I have deeply and intensely focused on AI agents. I've worked on two AI agent startups, launched several products using them and built dozens more that never left my computer. Since the first craze of AI agents in early 2023 my thinking has evolved, both through building and working with them 7 days a week as well as through seeing both positive and negative user reactions to them.
 
-1. What is an agent?
+This is a living document that I'll periodically update.
 
-2. The opportunity with agents
+### What is an agent?
 
-3. The challenges with agents
+An agent has two properties:
+1. It can interact with the world outside of itself
+2. It has its own context
 
-4. Designing magic (design principles)
+An agent's interaction with the outside world may be in the form of receiving the response from another LLM agent, it could be accessing a downstream data source such as a CRM or it could be the integration with an API or executable program (typically known as a tool within the space). Maintaining its own context is also important, and its why a successive conversation with an LLM assistant wouldn't qualify as an agent, but two separately maintained message logs to an LLM would. There must be a cohesiveness to the maintained context. This could be in the form of a system prompt that defines the instruction and then a message chain that only relates to the input or output of that instruction (worker), or it could be a system prompt that defines a character to represent the perspective of which then reacts to a varied chain of messages (persona).
 
+Notice that the agency of an LLM inference has nothing to do with the prompting pattern of the call. Patterns such as ReAct or Chain-of-Thought are of course some of the main methods we achieve these qualities, but in time these will be replaced by methods that <a href="https://arxiv.org/pdf/2307.09702" rel="noopener noreferrer" class="hover:text-slate-500"> leverage a deeper understanding of transformers</a>.
+
+### The challenges with agents
+
+The opportunity of agents is almost inconceivably large, but unlike initial reactions to the first wave that predicted they would be a sweeping force they are yet to realise their full potential. Some observations on why this is:
+
+1. Early iterations (e.g. AutoGPT) gave them far too much autonomy thinking that generalisation rather than guardrailing was the key to task success
+2. Context windows weren't large enough
+3. High inference costs meant inefficient token usage and large queries destroyed the economics
+
+Points 2 and 3 are now almost resolved as of mid-2024 due to better models (higher intelligence and context window size at lower costs), both with LLMs and embeddings. There is still a long way to go, and I believe as training and finetuning continues to improve alongside the access to opensource models a mixture-of-experts at the agent level between multiple models will be a promising development. Advances in structured guided text generation has significantly improved point 1 but the initial thought that we could build generalised systems in less than 200 lines of code is still a long way away.
+
+### The opportunity with agents
+
+My focus with agents is making them productive, which I'll define as impacting professional work.
+It is my belief that there are two paradigms that agents must follow, of which the design considerations when building them into applications are orthogonal. It comes down to this:
+
+> Are you scaling your workforce **horizontally** or **vertically**?
+
+#### Super Soldiers
+
+Scaling your workforce horizontally means building AI agents that are their own entities within the team. Characteristics of AI agents designed to be super soldiers are:
+* Anthropomorphic branding - names like "Devin" that symbolise another team member
+* Minimal or zero human-in-the-loop during the completion of tasks
+	* At natural breakpoints like inputs or outputs there might be HIIL (akin to colleague)
+* Lower authorisation as its own entity
+
+If you are building super soldiers your ultimate goal is the eventual replacement of humans with their AI counterparts. This need not be dystopic. A great example I saw firsthand is the age-bomb in the wealth management space, with the average age of a financial adviser ~60 and decreasing numbers of young people entering the profession. This cohort of advisers are looking to reduce their workload as they begin the path towards retirement or to hand-off in entirety. One risk they face with bringing in a human junior adviser is that if they are any good at their job they are liable to breaking away and taking clients with them. This presents a great opportunity for an AI agent who could increase the human's workload by handling non-relationship work.
+
+#### Super Powers
+
+Scaling your workforce vertically means augmenting the work of the existing (human) workers within the team. Characteristics include:
+* Utilitarian branding - names are task or role specific similar to traditional SaaS
+* Human-in-the-loop during completion of tasks
+* Authorisation equivalent or close to worker it is augmenting
+
+
+#### The future is Sparta not Salesforce
+
+Like many others in the space I have a strong belief that by the end of the decade a billion dollar company will be built with a team of 10 or less people. Flat hierarchies are closer to the natural order than the current sycamore's of corporate trees and AI agents will be the enabling factor of this through combined horizontal and vertical scaling.
+
+### Designing magic
+
+Over the course of my first AI agent startup I developed and refined my thinking around the design principles of agents. Below are the principles that we ended up with after launching two products aimed around reducing the cross-functional friction of employees in startups (we were designing _super powers_ as per my previous definitions). These principles are not generalised for all agent use cases, but in the context of building the future of work I think they stand to be a good starting point.
+
+1. **Our crusade is against blank pages not imperfect ones**
+
+We think generative AI should lower the barrier to entry and reduce the writers block of creativity, rather than impose expectations that it will be a perfect version. We aim to get them off the starting block as quickly and frictionlessly as possible, but we do not promise that it will be flawless.
+
+2. **A magic show is performed on the frontstage not in the backroom**
+
+Users will always be more impressed with seeing the generative process in front of them rather than just showing the output. They should be made a part of the process (see principle 3). Compare the magic of watching ChatGPT stream an answer versus a Google search result.
+
+3. **Our users are scientists not autocrats**
+
+Users want to use generative AI to remove the friction of grunt work in order to experiment, but they do not want to relinquish control. The goal for our agents is agency (action at scale on behalf of the user) not autonomy (action set by itself).
+
+4. **The future is amorphous**
+
+We believe that the future of interfaces will be adaptive to the users needs, meaning that the learning curve is placed on the system and not the user. As the complexity underpinning systems grows (such as via LLMs), the complexity on the frontend will shrink. Forms and boxes will be replaced with natural language and graphics.
+
+### Conclusion
+
+In summary there's still a long way to go, but agents represent the most useful application of LLMs thus far.
+
+I'm always looking to talk more with those interested in the subject. Reach out to me on LinkedIn or Email, both are on the homepage of this site.

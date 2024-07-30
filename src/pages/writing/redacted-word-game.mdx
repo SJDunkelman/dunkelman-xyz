@@ -1,0 +1,18 @@
+---
+layout: ../../layouts/WritingLayout.astro
+title: 'Word Puzzle Game [REDACTED]'
+pubDate: 2024-07-30
+lastEdit:
+ongoing: false
+description: 'The simplest seeming puzzles can be the hardest'
+---
+
+This article is TBD as I'll do a full writeup once the game is out of its current testing period, but what I can say is of all the LLM applications I've built this seemingly simple word game has proven one of the hardest challenges. It requires a MASSIVE network graph that until the release of gpt-4o-mini would have cost around $1000 to build in entirety. At the time of writing I've built, and rebuilt the engine for this knowledge graph about 5-6 times. Semantic density has proven the most difficult challenge.
+
+Some notes from my quest to get to a high enough accuracy*:
+1. "Traditional" NLP still has its place within transformer driven applications
+2. Matching the semantic expectations of users to systems requires a multistep approach. I am increasingly becoming convinced that whilst you may not create by committee, self-regulation is best achieved through a quorum.
+3. One must consider the coarseness of lexical databases when using them in applications. For example NLTK WordNet is not sufficiently coarse enough to handle Polysemy as expected by human users
+
+
+\* = Defined as satisfying my mum who is an English Literature teacher

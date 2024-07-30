@@ -12,14 +12,14 @@ import { ChevronRight } from "lucide-react";
 import TechStackIcons from "@/components/TechStackIcon.jsx";
 
 const projects = [
-	{
-		name: "Skool.Report",
-		status: "live",
-		techStack: ["Python", "React", "Postgres"],
-		notes: "Community intelligence SaaS for Skool.com communities",
-		link: "https://www.skool.report/",
-		date: new Date('2024-05-01'),
-	},
+	// {
+	// 	name: "Skool.Report",
+	// 	status: "live",
+	// 	techStack: ["Python", "React", "Postgres"],
+	// 	notes: "Community intelligence SaaS for Skool.com communities",
+	// 	link: "https://www.skool.report/",
+	// 	date: new Date('2024-05-01'),
+	// },
 	{
 		name: "Wealth Sherpa",
 		status: "dead",
@@ -57,7 +57,7 @@ const projects = [
 		status: "paused",
 		techStack: ["Python", "Postgres"],
 		notes: "Conversational AI notes app",
-		link: "",
+		link: "/writing/conjure-page",
 		date: new Date('2024-02-01'),
 	},
 	{

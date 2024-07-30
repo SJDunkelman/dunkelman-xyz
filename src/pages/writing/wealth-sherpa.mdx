@@ -1,10 +1,93 @@
+---
+layout: ../../layouts/WritingLayout.astro
+title: 'Post Mortem: Wealth Sherpa'
+pubDate: 2023-12-10
+lastEdit: 2024-07-01
+ongoing: false
+description: 'My entrepreneurial education'
+---
+import ImageCard from '../../components/ImageCard.astro'
 
+> "Wealth Sherpa helps wealth managers nurture more profitable relationships through automation."
 
+Wealth Sherpa was borne out of seeing the time wastage before and after meetings with clients during my time working as an analyst/paraplanner at St James Place. The end product was a technical success, bringing down the process time of suitability letters from an hour to just a couple of minutes, but a commercial failure which I learned many lessons from.
 
-* Navigating the idea maze
+<ImageCard
+	imageSrc="/src/images/writing/wealth-sherpa/wealth-sherpa.png"
+	imageAlt="Wealth Sherpa"
+	subtitle=""
+/>
 
-* The idea
+### The Idea Maze
 
-* The execution
+My first day at Imperial College I had a meeting with the career service, which is a conversation that would shape the rest of my life.
 
-* The outcome
+> "So if you could do anything, what would you do?"<br/>
+"Well I want to leave here to be a quant and 'earn my stripes', but my dream has always been to start a tech company."<br/>
+"So why not take the straightest path?"
+
+Over the next year I soaked up as much from lectures and pitch evenings in the Imperial Enterprise Lab as I did my studies in the Business School. My first idea for the product was to portfolio analytics as existing products like FE still required a lot of manual usage. After some customer discovery interviews I decided not only was this an increasingly crowded space but also wasn't seen as too much of a pain point. I then pivoted to the hidden friction of suitability letters, which wasted a lot of cumulative time and had zero scalability between clients unlike portfolio analytics.
+
+Between early 2020 and my graduation in September I started building the PDF extraction and document generation tool. This took many iterations to get to our target accuracy as the fund transfer PDFs were highly variable between investment vehicle types, with the final solution requiring image segmentation (opencv2) and OCR.
+
+<ImageCard
+	imageSrc="/src/images/writing/wealth-sherpa/terminal.png"
+	imageAlt="Wealth Sherpa CLI Screenshot"
+	subtitle=""
+/>
+
+After graduation I began building this from a proof-of-concept into a startup. I pitched the idea to the partner at St James Place that I previously worked for and secured some small initial investment for development costs. I also had my first foray into brand design (thanks to the mentorship of <a href="https://www.linkedin.com/in/tomwoodnutt/" rel="noopener noreferrer" class="hover:text-slate-500">Tom Woodnutt</a>) which years later I now consider my second strongest skill set after software development (side note: the sherpa lives on in <a href="https://accountssherpa.com/" rel="nofollow noopener noreferrer" class="hover:text-slate-500">Account Sherpa</a> which I designed and built for my accountant).
+
+```
+Lesson
+=> Mixing investors and early customers is VERY delicate. You need to be extra explicit in defining boundaries and expectations at the beginning to avoid misunderstandings later.
+```
+
+### MVP
+
+With time pressing on and the ReactJS frontend of my app not yet finished, I wanted to begin testing and validating the core document engine. I began selling the service as I had as a contractor to my investors practise, generating documents using a CLI version of the app and checking them myself to QA the result. In retrospect this was a good idea but I used the exercise as too much of a validation that the tech worked and not enough of the validity of the products demand - I should have scaled this manual service to more practises to learn how much of a pressing issue suitability letters were.
+
+During this time I was juggling development and customer outreach trying to contact as many of the ~11,000 SJP partners I could to find customers for once I launched. First it was the LinkedIn connections, then it was emails and then in a final desperation I scraped the "Find an Adviser" interactive map to start calling as many as I could. This was my first experience with cold outreach and looking back I couldn't have made more mistakes if I tried. After sending yet another email into the void I remember getting a response back from one of my previous emails: "Can we talk on the phone?". I was elated. I called him, only to find out that due to using my internal SJP address and the way I had worded it, he (and likely many others) had assumed this was test from SJP in avoiding phishing links from hacked emails.
+
+Towards the end of the year as my cash ran ever shorter I went all-in on development. I hired a React developer on Upwork to help increase capacity whilst I fixed the parts of the backend that weren't ready for production yet. Bearing in mind this also coincided with the second COVID lockdowns of the UK, my time in a dingy basement flat in Putney were about as isolating an experience I think is possible for an founder. It was an intensity I think few have experienced. I was at my desk by 9am and would finish work around 1-2am and the closest I got to leaving the house was answering the door for the food delivery guy, driven by pure adrenaline at the thought of failing (or succeeding).
+
+[//]: # (-> The last 2 weeks of december I worked an average of 114 hours per week. Later on I would come back to my flat to see my whiteboard,)
+
+[//]: # (-> Incredibly low conversion rate due to poor messaging. Compare this with my work in August Group 4 years later where I hit an incredible conversion rate for contracts 10X the size, albeit with a much better product.)
+
+[//]: # ()
+[//]: # (* Meeting SJP)
+
+[//]: # ()
+[//]: # (-> Met with director of BD, who then passed me onto one of the team that handled technology controls.)
+
+[//]: # (-> Meanwhile I was also realising how much I had over-extrapolated with early customers.)
+
+[//]: # ()
+[//]: # (* The demise)
+
+[//]: # ()
+[//]: # (-> Retarded to convert to a local app)
+
+[//]: # ()
+[//]: # (* The outcome)
+
+```
+Lesson
+=> More of a lesson about myself, but with my natural intensity I was always going to suffer extreme burnout at some stage. This wouldn't be the last time I sacrificed health for work, but the experience of Wealth Sherpa was the inflection point that lead to me maturing where now I can work sustainably for the marathon, not just the sprints.
+```
+
+```
+Lesson
+=> In a startup you have <1% chance of success. You have a 100% chance of going through the trials and tribulations of founding a company. No matter what the carrot at the end of the stick is, you must fall in love with the process, which means doing work that you care about either in the actual work itself or the impact the work has. If you want to be 100% mercenary IMO you should probably start an agency.
+```
+
+[//]: # (```)
+
+[//]: # (Lesson)
+
+[//]: # (=> In this project and in every one since I have further learned the value of accurate time management. I think Engineers are more prone than any other team member to overconfidence with also the greatest impact when estimates are not realistic.)
+
+[//]: # (```)
+
+🚨 To Be Continued 🚨

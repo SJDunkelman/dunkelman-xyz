@@ -1,0 +1,22 @@
+---
+interface Props {
+    imageSrc: string;
+    imageAlt: string;
+}
+
+const { imageSrc, imageAlt } = Astro.props;
+---
+
+<div class="rounded-lg overflow-hidden border-2 border-slate-300/25 shadow-md">
+	<img
+			src={imageSrc}
+			alt={imageAlt}
+			class="w-full h-auto object-cover block"
+	/>
+</div>
+
+<style>
+    .shadow-md {
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+</style>

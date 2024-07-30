@@ -1,0 +1,30 @@
+---
+layout: ../../layouts/WritingLayout.astro
+title: 'Conjure.Page'
+pubDate: 2023-12-10
+lastEdit: 2024-07-01
+ongoing: false
+description: 'AI voice to document generator'
+---
+import ImageCard from '../../components/ImageCard.astro'
+
+> "Create notes with your voice. Like magic."
+
+Conjure.Page is the productised form of how I've worked for the last several years. I've always been a talker, and since the inception of Whisper voice memos have almost completely replaced my taking of notes. My typical flow for a meeting or brainstorm is this:
+* Record audio
+* Transcribe with Whisper
+* Feed into LLM to summarise / refine
+* Use refined notes within multiple LLM conversations to further brainstorm/discuss points
+
+Conjure supercharges this by jumping straight from voice memos to finished markdown documents that include not just text but diagrams and images too. It's currently in a state where I can generate polished documents with text and some diagrams with images TBC (<a href="/next-leg-closure.png" target="_blank" class="underline-offset-4 hover:animate-pulse">😭</a>). The main requirement for this product was that the rendered document was holistic and non-linear, meaning that the rendered document was a representation of extracted data up to time T, rather than a traditional transcription. This would mean that one statement may completely change the entire document, which is what I wanted as my voice memos are usually me working through a problem and adapting/evolving my thinking over the course of the memo.
+
+The main technical breakthrough on this project has been in creating an encoder/decoder architecture for document generation. We need to go from a very unstructured body of text into a structured document that has cohesive composition and narrative. This involved the use of knowledge graphs, XML and multi-agents.
+
+I've put the project on pause for now but will likely release sometime in late 2024.
+
+<ImageCard
+	imageSrc="/src/images/writing/conjure/landing-page.png"
+	imageAlt="Wealth Sherpa"
+	subtitle=""
+/>
+

@@ -14,6 +14,44 @@ module.exports = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				source: ["Source Serif 4", "serif"],
+			},
+			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						blockquote: {
+							// color: theme('colors.gray.300'), // Light text color
+							backgroundColor: theme('colors.slate.200'), // Dark background color
+							borderLeftColor: theme('colors.blue.500'), // Accent color for left border
+							paddingLeft: theme('spacing.4'),
+							paddingRight: theme('spacing.4'),
+							paddingTop: theme('spacing.2'),
+							paddingBottom: theme('spacing.2'),
+							borderRadius: theme('borderRadius.md'),
+						},
+						'blockquote p': {
+							fontWeight: '300', // Ensure paragraphs inside blockquote are light
+						},
+						'blockquote p:first-of-type::before': {
+							content: 'none', // Remove the default quotation mark
+						},
+						'blockquote p:last-of-type::after': {
+							content: 'none', // Remove the default quotation mark
+						},
+						'code': {
+							whiteSpace: 'pre-wrap',
+							wordBreak: 'break-word',
+							hyphens: 'auto',
+							overflowWrap: 'break-word',
+						},
+						'pre code': {
+							display: 'inline-block',
+							maxWidth: '100%',
+						},
+					},
+				},
+			}),
 			keyframes: {
 				"accordion-down": {
 					from: { height: "0" },
@@ -30,5 +68,8 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/typography')
+	],
 }

@@ -1,5 +1,22 @@
 ---
+import '@/globals.css'
+import WritingNavBar from "../components/WritingNavBar";
 const {frontmatter} = Astro.props;
+import ImageCard from "../components/ImageCard.astro";
+
+// Format the date
+const formatDate = (dateString) => {
+    if (!dateString) return null;
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+};
+
+const publishedDate = formatDate(frontmatter.pubDate);
+const editedDate = formatDate(frontmatter.lastEdit);
 ---
 
 <!doctype html>
@@ -12,7 +29,19 @@ const {frontmatter} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{frontmatter.title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="max-w-screen overflow-x-hidden">
+	<main class="max-w-2xl px-6 md:px-0 mx-auto text-left flex flex-col space-y-6 pt-3 pb-20 font-light font-source">
+        <WritingNavBar />
+        <h1 class="text-4xl font-semibold tracking-wide">{frontmatter.title}</h1>
+        <p class="text-xl font-thin">{frontmatter.description}</p>
+        <div class="text-xs text-right">
+			<p>{publishedDate}</p>
+            <!--<p class="italic">Updated: {editedDate}</p>-->
+            {editedDate && <p class="italic">Updated: {editedDate}</p>}
+        </div>
+		<article class="prose lg:prose-lg">
+		    <slot />
+        </article>
+    </main>
 	</body>
 </html>
