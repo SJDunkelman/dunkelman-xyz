@@ -97,50 +97,86 @@ const statusColors = {
 	paused: 'bg-slate-300 text-slate-800',
 };
 
+const ProjectCard = ({ project, index }) => (
+	<div className="bg-white shadow rounded-lg p-4 mb-4">
+		<div className="flex justify-between items-center mb-2">
+			<h3 className="font-medium">
+				{project.name ? (
+					project.name
+				) : (
+					<span className="bg-black text-white text-xs px-2 py-1">REDACTED</span>
+				)}
+			</h3>
+			<span className={`px-2 py-1 rounded-full text-xs font-semibold ${statusColors[project.status]}`}>
+        {project.status}
+      </span>
+		</div>
+		<div className="mb-2">
+			<TechStackIcons techStack={project.techStack} isMobile={true} />
+		</div>
+		<p className="text-sm text-gray-600 mb-2">{project.notes}</p>
+		{project.link && (
+			<a href={project.link} className="flex items-center text-blue-600 hover:text-blue-800 text-sm">
+				More <ChevronRight size={16} />
+			</a>
+		)}
+	</div>
+);
+
 export default function ProjectsTable() {
 	return (
-		<Table>
-			<TableCaption>Plus many more collecting dust</TableCaption>
-			<TableHeader>
-				<TableRow>
-					<TableHead className="w-[120px]">Name</TableHead>
-					<TableHead>Status</TableHead>
-					<TableHead className="w-[75px]">Tech Stack</TableHead>
-					<TableHead className="w-full">Notes</TableHead>
-					<TableHead className="w-min"></TableHead>
-				</TableRow>
-			</TableHeader>
-			<TableBody>
+		<div>
+			{/* Mobile view */}
+			<div className="md:hidden">
 				{sortedProjects.map((project, index) => (
-					<TableRow key={project.name || `redacted-${index}`}>
-						<TableCell className="font-medium break-words">
-							{project.name ? (
-								project.name
-							) : (
-								<span className="bg-black text-white text-xs px-2 py-1">REDACTED</span>
-							)}
-						</TableCell>
-						<TableCell>
-                            <span className={`px-2 py-1 rounded-full text-xs font-semibold ${statusColors[project.status]}`}>
-                                {project.status}
-                            </span>
-						</TableCell>
-						<TableCell>
-							<TechStackIcons techStack={project.techStack} />
-						</TableCell>
-						<TableCell>{project.notes}</TableCell>
-						<TableCell>
-							{project.link ? (
-								<a href={project.link} className="flex items-center text-blue-600 hover:text-blue-800">
-									More <ChevronRight size={16} />
-								</a>
-							) : null
-							}
-
-						</TableCell>
-					</TableRow>
+					<ProjectCard key={project.name || `redacted-${index}`} project={project} index={index} />
 				))}
-			</TableBody>
-		</Table>
+			</div>
+
+			{/* Desktop view */}
+			<div className="hidden md:block">
+				<Table>
+					<TableCaption>Plus many more collecting dust</TableCaption>
+					<TableHeader>
+						<TableRow>
+							<TableHead className="w-[150px]">Name</TableHead>
+							<TableHead className="w-[100px]">Status</TableHead>
+							<TableHead className="w-[100px]">Tech Stack</TableHead>
+							<TableHead className="w-full">Notes</TableHead>
+							<TableHead className="w-min"></TableHead>
+						</TableRow>
+					</TableHeader>
+					<TableBody>
+						{sortedProjects.map((project, index) => (
+							<TableRow key={project.name || `redacted-${index}`}>
+								<TableCell className="font-medium break-words">
+									{project.name ? (
+										project.name
+									) : (
+										<span className="bg-black text-white text-xs px-2 py-1">REDACTED</span>
+									)}
+								</TableCell>
+								<TableCell>
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${statusColors[project.status]}`}>
+                    {project.status}
+                  </span>
+								</TableCell>
+								<TableCell>
+									<TechStackIcons techStack={project.techStack} isMobile={false} />
+								</TableCell>
+								<TableCell>{project.notes}</TableCell>
+								<TableCell>
+									{project.link && (
+										<a href={project.link} className="flex items-center text-blue-600 hover:text-blue-800">
+											More <ChevronRight size={16} />
+										</a>
+									)}
+								</TableCell>
+							</TableRow>
+						))}
+					</TableBody>
+				</Table>
+			</div>
+		</div>
 	)
 }

@@ -24,18 +24,31 @@ const formatTechName = (name) => {
 	return name.replace(/([A-Z])/g, ' $1').trim();
 };
 
-export default function TechStackIcons({ techStack }) {
+export default function TechStackIcons({ techStack, isMobile = false }) {
+	if (isMobile) {
+		return (
+			<div className="flex flex-wrap gap-2">
+				{techStack.map((tech) => (
+					<div key={tech} className="flex items-center space-x-1">
+            <span className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center">
+              {techIcons[tech]}
+            </span>
+						<span className="text-xs">{formatTechName(tech)}</span>
+					</div>
+				))}
+			</div>
+		);
+	}
+
 	return (
 		<TooltipProvider>
 			<div className="grid grid-cols-3 gap-2 w-[75px]">
 				{techStack.map((tech) => (
 					<Tooltip key={tech}>
 						<TooltipTrigger>
-                            <span
-								className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center"
-							>
-                                {techIcons[tech]}
-                            </span>
+              <span className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center">
+                {techIcons[tech]}
+              </span>
 						</TooltipTrigger>
 						<TooltipContent side="bottom" align="center">
 							<p>{formatTechName(tech)}</p>
