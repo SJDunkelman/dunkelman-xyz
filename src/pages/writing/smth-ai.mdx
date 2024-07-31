@@ -1,0 +1,142 @@
+---
+layout: ../../layouts/WritingLayout.astro
+title: 'Post Mortem: Smth AI'
+pubDate: 2024-07-10
+lastEdit: 2024-07-31
+ongoing: false
+description: 'My mission to make AI agents productive'
+---
+import ImageCard from '../../components/ImageCard.astro'
+import SmthExploreScreensImage from '../../images/writing/smth-ai/smth-explore.webp'
+import LaunchSchoolImage from '../../images/writing/smth-ai/mvp-launch-school.webp'
+import SmthExplorePromptImage from '../../images/writing/smth-ai/smth-explore-prompt.webp'
+import SmthExploreVoiceImage from '../../images/writing/smth-ai/smth-explore-voice.webp'
+import SmthExploreSocialImage from '../../images/writing/smth-ai/smth-explore-social.webp'
+import CometComputerImage from '../../images/writing/smth-ai/comet.webp'
+
+Smth AI, later known as Comet Computer, was the beginning of my mission to make AI agents productive. I cofounded Smth with <a href="https://www.linkedin.com/in/deckickham/" class="hover:text-slate-500">Dec</a> with the belief (that still holds as of mid-2024) that a radically new future of work is currently being invented and <a href="/writing/ai-agents" class="hover:text-slate-500">AI agents</a> are a core pillar of that.
+
+### The Spark 💡
+
+A lightbulb went off in my head on 3<sup>rd</sup> April 2023 when Yohei released BabyAGI. I had seen AutoGPT released just before but the more "functional" (and IMO elegant) implementation really unlocked in my head the possibilities that could be built with this new paradigm. Over the course of the next 18 months, and still to this day, I have remain deeply engulfed by this idea and the mission to make this concept productive to change the future of work.
+
+### Smth Explore: AI Prompt Social Network
+
+Speaking to anyone outside of our tech bubble about the power of LLMs there was one overriding sentiment:
+
+> “ChatGPT is cool, but what do I use it for?”
+
+Before OpenAI released the ChatGPT app, we built [Smth.AI](http://smth.ai/), a ChatGPT-like UI where users could search & share conversations and prompts. 
+
+Exploration and Optimism were the central themes of the Smth brand. I still feel strongly that we're creating the future, and that excitement and possibility needs to be reflected in the tone of products (#e/acc).
+
+
+<ImageCard
+	imageSrc={SmthExploreScreensImage}
+	imageAlt="Smth Explore App screens"
+	subtitle=""
+/>
+
+
+#### Prompt community
+
+Users could browse prompts & conversations by category, or through following other users. 
+
+<ImageCard
+imageSrc={SmthExploreSocialImage}
+imageAlt="Smth Explore Prompt"
+subtitle=""
+/>
+
+#### Text-to-prompt
+
+Users could describe what they wanted out of their conversation and we would convert it into a fully-fledged prompt
+
+<ImageCard
+imageSrc={SmthExplorePromptImage}
+imageAlt="Smth Explore Prompt"
+subtitle=""
+/>
+
+#### Assistant Speech
+
+Long before ChatGPT released their version of assistant chat we implemented this using Eleven Labs for TTS.
+
+<ImageCard
+imageSrc={SmthExploreVoiceImage}
+imageAlt="Smth Explore Voice Assistant"
+subtitle=""
+/>
+
+#### Outcome
+
+In the run up to launch we set up partnerships with prominent 'AI influencers' and received 500+ signups. We released the first version onto test pilot to an early group of users and received a tonne of great feedback. Ultimately just before we launched to the app store OpenAI released their mobile app and we decided to pivot to something we thought would be more impactful in the long term, which for us was focusing more on using agents to change the way businesses are built and operated.
+
+```
+Lesson
+=> If there was one thing I learned from the first half of 2023 it was this: it is as important to know when to remain steadfast as it is to be nimble in a startup. Up to this point I prided myself on my adaptability and speed, but if you become too reactive (especially when an innovation wave is moving as fast as AI has been these past couple of years) you end up becoming a ship that moves at the whim of the ocean.
+```
+
+
+### Smth Launch School
+
+Both myself and Dec are first and foremost builders, and so we were most passionate about serving that customer base. It made a lot of sense - those with less resources and more pressure to iterate quickly stand the most to gain from the exponential reductions in time/cost brought about by AI. As we described in one VC meeting, it's not about somehow increasing the probability that a single idea will succeed (the market of ideas is possibly the most efficient and unlikely to change in nature), it was about increasing the chance of founder success by reducing the cost to validate an idea.
+
+We decided the best GTM were those in their first build-measure-learn loops as there would be maximal overlap between users, whereas more mature teams already with products and systems would need more customisation. We developed the course in line with what had worked during our time in EF and other startups (Dec held the record at BCG for most hackathons led by anyone in Digital Ventures) and began talking to customers. We spoke to over 50 entrepreneurs building their ideas and incubated 5 of them who paid for a two week intensive course.
+
+These startups used our suite of AI agents that could:
+
+* Build websites
+* Write landing page copy
+* Write user research questionnaires
+* Create initial brand guides
+* Answer questions about startup principles backed by the knowledge of Paul Graham essays and many other key materials
+
+To reduce as much friction so that most of the course was spent talking to customers. We served these through private discord channels where they could interact with agents as bots. We also had a course app where they could access learning materials for the day's session that covered key founding topics like lean startup methodology or customer development. Each day we had group calls and one-on-one calls with founders to push them through the loop as quickly as possible, with the aim to complete a loop each week. The results were promising, with a couple invalidating ideas (one of whom saved himself the five-figure sum that an agency had quoted to build his app right away) and <a href="https://www.pathio.co/" rel="norel noreferrer">another that has succeeded</a> and is doing well (Naz was a terrific founder to work with).
+
+<ImageCard
+imageSrc={LaunchSchoolImage}
+imageAlt="MVP Launch School homepage"
+subtitle=""
+/>
+
+#### Outcome
+
+Despite a successful (and profitable) first cohort of users, the feedback from investors as we prepared for our pre-seed was that early stage founders were an awful customer to have - it's hard to build a business when 50% of your customers go out of business every few months! It was good feedback and we agreed that there was a better opportunity to move upstream to more mature teams with higher ROI work done by agents.
+
+### Comet Computer: An IDE for Business
+
+Our vision for Comet was a single workspace to build a business, using LLM’s and agents to get tasks done faster. An IDE for building a company. This was much more aligned with our vision that one day <a href="/writing/ai-agents">a billion dollar business will be built by a team of 10 or less people</a>.
+
+One of the core design elements that came out of customer conversations was the metaphor of "hats" to represent the different types of work you could do. The UI took after desktops, and so each hat was a window you could open for different functions like marketing, sales or product. It was an arbitrary distinction as they all had access to the same underlying system of agents, but the log of tasks and messages was contained to each for organisation.
+
+<div className="w-full flex justify-center">
+	<iframe width="560" height="315"
+			src="https://www.youtube.com/embed/qQfXJkQV4ec?si=DKQwtF1MnG6RJDxV"
+			title="YouTube video player"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerPolicy="strict-origin-when-cross-origin"
+			allowFullScreen></iframe>
+</div>
+Our GTM was automating outbound sales email campaigns (shown in the above demo) as we wanted an initial use case that showed quantifiable returns to our customers. All a user had to do was provide a natural language description of their target customer and we would handle finding the prospects on LinkedIn (via a partnership integration with a 3<sup>rd</sup> API), with further steps like writing the email campaign 'template' (all emails were customised and enriched with LI data) done conversationally.
+
+You may notice there was a serious flaw in the demo. It was too linear. What if a user just wanted a list of prospects but didn't want to email them? What if they wanted to send follow up emails to a previous set of leads? There was also a huge issue with using SendGrid for sending these kinds of emails (note to self: don't read the fine print of your integrations in the run up to launch 🤦‍♂️). I spent the entirety of Christmas 2023 doing a massive refactor of the system so that now tasks followed a tree structure, with nodes for input, output and processing so that they were malleable and instructions could follow various pathways along them. I also rewrote the API and frontend to be more realtime and asyncronous for our production release, using websockets and Celery workers. 
+
+```
+Lesson
+=> In our rewrite to v2 I fell into one of the major traps an engineer can on a horizontal product - I overengineered it to be more generalised than it needed to be, resulting in a complex system I built for a future that never arrived.
+
+"Keep it simple, stupid" - Kelly Johnson, Lockheed Skunk Works
+```
+
+<ImageCard
+	imageSrc={CometComputerImage}
+	imageAlt="Comet Computer"
+	subtitle=""
+/>
+
+Here's the version of the UI I was most proud of. Beta customer's didn't agree (the world isn't ready yet for the inevitable second coming of retro-futurism).
+
+### Outcome
+
+Working on Comet Computer developed me the most in my career so far and taught me many valuable lessons. We ran our beta with a handful of customers as design partners, but ultimately we failed as by the time we launched we had ran out of cash and personal circumstances for our team had changed. We made the difficult decision to close it down. Despite this many of the assumptions and beliefs I held for this startup I still hold, and I was able to take forward the same mission into my next role as CTO of August Group where I am building agentic systems for the back office of wealth management firms.

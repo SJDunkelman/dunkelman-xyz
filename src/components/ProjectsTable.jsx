@@ -21,6 +21,14 @@ const projects = [
 	// 	date: new Date('2024-05-01'),
 	// },
 	{
+		name: "Comet.Computer (fka Smth AI)",
+		status: "dead",
+		techStack: ["Python", "React", "Supabase"],
+		notes: "AI agent orchestration platform & products",
+		link: "/writing/smth-ai",
+		date: new Date('2023-04-10'),
+	},
+	{
 		name: "Wealth Sherpa",
 		status: "dead",
 		techStack: ["React", "Python", "Electron"],
@@ -66,7 +74,7 @@ const projects = [
 		techStack: ["Solidity", "React"],
 		notes: "Insuretech protecting against crypto scams & fraud built; insured $40k of assets in 34 days during EF",
 		link: "https://www.healthpotion.xyz/",
-		date: new Date('2024-01-10'),
+		date: new Date('2022-10-01'),
 	},
 	{
 		name: "Primordia.io",
@@ -105,7 +113,7 @@ export default function ProjectsTable() {
 			<TableBody>
 				{sortedProjects.map((project, index) => (
 					<TableRow key={project.name || `redacted-${index}`}>
-						<TableCell className="font-medium whitespace-nowrap">
+						<TableCell className="font-medium break-words">
 							{project.name ? (
 								project.name
 							) : (

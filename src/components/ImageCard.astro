@@ -11,18 +11,35 @@ const { imageSrc, imageAlt, subtitle } = Astro.props;
 ---
 
 <div class="rounded-lg overflow-hidden border-2 border-slate-300/25 shadow-md">
-	<Image
-			src={imageSrc}
-			alt={imageAlt}
-			width={800}
-			height={600}
-			class="w-full h-auto object-cover block"
-	/>
+	<div class="image-container">
+		<Image
+				src={imageSrc}
+				alt={imageAlt}
+				width={800}
+				height={600}
+				class="image"
+		/>
+	</div>
     {subtitle && <p class="text-center text-sm mt-2">{subtitle}</p>}
 </div>
 
 <style>
     .shadow-md {
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    .image-container {
+        width: 100%;
+        max-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .image {
+        max-width: 100%;
+        max-height: 500px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
     }
 </style>
