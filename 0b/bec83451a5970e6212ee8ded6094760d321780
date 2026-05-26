@@ -1,0 +1,19 @@
+src/components/TechStackIcon.jsx
+  s_0d860db4c5ef16::t_adafadb7aadc9a 4,21,62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0bbec83451a5970e6212ee8ded6094760d321780",
+  "prompts": {},
+  "sessions": {
+    "s_0d860db4c5ef16": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e640b-3a4f-7dc3-8e5a-1c849ee223ba",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Simon Dunkelman <simon@dunkelman.xyz>"
+    }
+  }
+}
