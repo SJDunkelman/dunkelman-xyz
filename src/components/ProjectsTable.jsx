@@ -38,7 +38,7 @@ const projects = [
 	},
 	{
 		name: "",
-		status: "testing",
+		status: "dead",
 		techStack: ["Go", "React", "Python"],
 		notes: "Productivity RPG to gamify time management using vision models",
 		link: "",
@@ -46,7 +46,7 @@ const projects = [
 	},
 	{
 		name: "",
-		status: "testing",
+		status: "paused",
 		techStack: ["ReactNative", "Python"],
 		notes: "Word puzzle game powered by AI-driven semantic knowledge graphs",
 		link: "/writing/redacted-word-game",
@@ -83,6 +83,22 @@ const projects = [
 		notes: "Online community built on top of Creative Commons NFT project; sold to NFT project",
 		link: "https://www.moonrunners.io/",
 		date: new Date('2022-04-01'),
+	},
+	{
+		name: "Automate Food",
+		status: "live",
+		techStack: ["ReactNative", "Python", "Postgres"],
+		notes: "AI Meal Planning app aimed at reducing the cognitive burden of hitting macros for active Gen Z",
+		link: "https://automate.food/",
+		date: new Date('2025-11-01'),
+	},
+	{
+		name: "BeltFed AI",
+		status: "live",
+		techStack: ["React", "Python", "Postgres", "Rust"],
+		notes: "Distribution engineering for operators",
+		link: "https://beltfed.ai/",
+		date: new Date('2026-05-30'),
 	},
 ];
 

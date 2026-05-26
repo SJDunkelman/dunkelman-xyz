@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiLogoPostgresql, BiLogoPython, BiLogoGoLang } from "react-icons/bi";
 import { TbBrandSupabase } from "react-icons/tb";
-import { SiSolidity, SiReact, SiElectron } from "react-icons/si";
+import { SiSolidity, SiReact, SiElectron, SiRust } from "react-icons/si";
 import {
 	Tooltip,
 	TooltipContent,
@@ -18,6 +18,7 @@ const techIcons = {
 	Solidity: <SiSolidity size={16} />,
 	Go: <BiLogoGoLang size={16} />,
 	Electron: <SiElectron size={16} className="text-[#272937]" />,
+	Rust: <SiRust size={16} className="text-[#dea584]" />,
 };
 
 const formatTechName = (name) => {
