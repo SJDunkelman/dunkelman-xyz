@@ -1,0 +1,21 @@
+src/pages/index.astro
+  s_5a860b7d024352::t_867140f461b6dd 36
+  s_5a860b7d024352::t_9977da42c66433 69
+  s_5a860b7d024352::t_5d45521c765726 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a8afcb8f4fe1dc71033405c8cc4c02a3f6c891e6",
+  "prompts": {},
+  "sessions": {
+    "s_5a860b7d024352": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9aca4f53-5c4d-417a-82f1-885f63a17b19",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Dunkelman <simon@dunkelman.xyz>"
+    }
+  }
+}
