@@ -94,10 +94,10 @@ const projects = [
 	},
 	{
 		name: "BeltFed AI",
-		status: "live",
+		status: "development",
 		techStack: ["React", "Python", "Postgres", "Rust"],
 		notes: "Distribution engineering for operators",
-		link: "https://beltfed.ai/",
+		link: "",  // https://beltfed.ai/
 		date: new Date('2026-05-30'),
 	},
 ];
