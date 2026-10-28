@@ -1,0 +1,19 @@
+src/components/ProjectsTable.jsx
+  s_5a860b7d024352::t_89fd7aadab4d91 97,100
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b38f8841706943bf8c82e2896473f3fdc4842bf7",
+  "prompts": {},
+  "sessions": {
+    "s_5a860b7d024352": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9aca4f53-5c4d-417a-82f1-885f63a17b19",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Simon Dunkelman <simon@dunkelman.xyz>"
+    }
+  }
+}
